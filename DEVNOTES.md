@@ -83,3 +83,35 @@ vercel --prod
   there once the site ships.
 - No contact form — contact is `mailto:`/`tel:` only, matching the original
   site. Revisit if a real intake flow is wanted later.
+- **Auszeit Mosel** and **Stromfritz** work items use placeholder copy —
+  their live deployments (`auszeit-mosel.vercel.app`,
+  `stromfritz.vercel.app`) currently return Vercel `DEPLOYMENT_NOT_FOUND`.
+  Once redeployed, update `messages/{en,de,lg}.json` → `work.items.auszeit-mosel`
+  / `work.items.stromfritz` with real copy and set `href` in
+  `src/data/work.ts`.
+- Luganda (`lg`) translations were machine-authored — worth a native-speaker
+  review pass at some point, flagged when this was set up.
+
+## In-progress: 2026-08-26 feature batch
+
+Working through a large batch of changes (i18n, case study, new work items,
+legal pages, nav dropdown, footer links, responsiveness) as separate
+feature branches per the convention above. Status:
+
+- ✅ Merged & deployed: `feat/i18n-infrastructure` (PR #10),
+  `feat/work-items-and-thumbnails` (PR #11).
+- 🔧 Built and locally verified (build + lint green, manually clicked
+  through in-browser), **not yet committed/PR'd/merged/deployed** as of
+  this note: the VD Handwerk² case-study page
+  (`src/app/[locale]/work/[slug]/page.tsx`,
+  `src/data/case-studies/vd-handwerk.ts`, plus the `caseStudy.vdHandwerk`
+  key and `work.viewCaseStudy` key added to all three `messages/*.json`,
+  and the "View case study" link wired into `Work.tsx`). Next step:
+  `git add -A`, commit (`feat: add VD Handwerk² case study page`), push,
+  open a PR against `main`, squash-merge, delete branch, `vercel --prod`.
+- ⏳ Not started yet: nav "Work" dropdown (branch 4), Impressum/Datenschutz
+  pages + footer backlinks (branch 5), full responsiveness audit (branch 6).
+- Full plan with architecture decisions lives at
+  `/Users/admin/.claude/plans/adaptive-leaping-octopus.md` on the machine
+  this was built on — re-read it before continuing if picking this back up
+  in a new session.

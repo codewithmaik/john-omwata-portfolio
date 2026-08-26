@@ -92,6 +92,7 @@
     "title": "Ein paar zuletzt gebaute Websites.",
     "description": "Kundenprojekte und eigene Übungsarbeiten aus Gastronomie, Architektur und Energieberatung.",
     "viewLive": "Live-Website ansehen ↗",
+    "viewCaseStudy": "Fallstudie ansehen →",
     "comingSoon": "Live-Website folgt in Kürze",
     "items": {
       "auszeit-mosel": {
@@ -257,6 +258,117 @@
           ]
         }
       ]
+    }
+  },
+  "caseStudy": {
+    "vdHandwerk": {
+      "eyebrow": "Fallstudie",
+      "name": "VD Handwerk² UG",
+      "tagline": "Alles rund ums Haus – aus einer Hand",
+      "metaArea": "60+ km Einsatzradius rund um Wuppertal und das Bergische Land",
+      "backLink": "← Zurück zu allen Arbeiten",
+      "ctaLiveSite": "Live-Website ansehen ↗",
+      "services": {
+        "eyebrow": "Leistungen",
+        "title": "Alles, was ein Haus braucht — aus einer Hand.",
+        "description": "Von der laufenden Hausmeisterei bis zur kompletten Entrümpelung: ein Ansprechpartner für private Haushalte, Hausverwaltungen und Unternehmen.",
+        "items": {
+          "hausmeister": {
+            "title": "Hausmeisterservice & Gebäudeservice",
+            "description": "Laufende Betreuung und Instandhaltung von Wohn- und Gewerbeimmobilien."
+          },
+          "garten": {
+            "title": "Gartenpflege",
+            "description": "Regelmäßige Pflege von Grünflächen, Hecken und Außenanlagen."
+          },
+          "reinigung": {
+            "title": "Reinigung",
+            "description": "Innen- und Außenreinigung für Privathaushalte und Gewerbeobjekte."
+          },
+          "kleinreparaturen": {
+            "title": "Kleinreparaturen",
+            "description": "Schnelle, unkomplizierte Reparaturen im und ums Haus."
+          },
+          "montage": {
+            "title": "Montage",
+            "description": "Auf- und Zusammenbau von Möbeln, Geräten und Ausstattung."
+          },
+          "renovierung": {
+            "title": "Renovierung & Innenausbau",
+            "description": "Modernisierung und Umgestaltung von Wohn- und Arbeitsräumen."
+          },
+          "umzug": {
+            "title": "Umzug & Logistik",
+            "description": "Organisation und Durchführung von Umzügen, inklusive Transport."
+          },
+          "rueckbau": {
+            "title": "Rückbau",
+            "description": "Fachgerechter Rückbau von Anbauten, Einbauten und Anlagen."
+          },
+          "entruempelung": {
+            "title": "Entrümpelung",
+            "description": "Vollständige Räumung von Wohnungen, Kellern und Nachlässen."
+          }
+        }
+      },
+      "about": {
+        "eyebrow": "Über uns",
+        "title": "Ihr verlässlicher Partner in Wuppertal",
+        "paragraph": "VD Handwerk² UG betreut private Haushalte, Hausverwaltungen und Unternehmen in Wuppertal und im Bergischen Land — mit einem Team, das Hausmeisterservice, Handwerksleistungen und Logistik aus einer Hand anbietet, statt mehrere Gewerke einzeln koordinieren zu müssen."
+      },
+      "process": {
+        "eyebrow": "Vorgehen",
+        "title": "So läuft die Zusammenarbeit.",
+        "steps": {
+          "anfrage": {
+            "title": "Anfrage",
+            "description": "Kurze Schilderung des Anliegens per Telefon, E-Mail oder Kontaktformular."
+          },
+          "vorortTermin": {
+            "title": "Vor-Ort-Termin",
+            "description": "Besichtigung und Einschätzung von Aufwand und Kosten."
+          },
+          "angebot": {
+            "title": "Angebot",
+            "description": "Transparentes Angebot ohne versteckte Kosten."
+          },
+          "umsetzung": {
+            "title": "Umsetzung",
+            "description": "Zuverlässige Ausführung im vereinbarten Zeitrahmen."
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Referenzen",
+        "title": "Ausgewählte Projekte",
+        "note": "Vorher-Nachher-Fotos folgen in Kürze.",
+        "placeholderAlt": "Platzhalter — Projektfoto folgt in Kürze"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Häufige Fragen",
+        "items": {
+          "q1": {
+            "question": "In welchem Gebiet sind Sie tätig?",
+            "answer": "Im Umkreis von rund 60 km um Wuppertal, im gesamten Bergischen Land."
+          },
+          "q2": {
+            "question": "Übernehmen Sie auch kleinere Aufträge?",
+            "answer": "Ja — von der Kleinreparatur bis zum kompletten Rückbau."
+          },
+          "q3": {
+            "question": "Sprechen Sie auch Russisch?",
+            "answer": "Ja, die Website und die Beratung sind auf Deutsch und Russisch verfügbar."
+          }
+        }
+      },
+      "contact": {
+        "eyebrow": "Kontakt",
+        "title": "Projekt rund ums Haus geplant?",
+        "subhead": "Kontaktieren Sie VD Handwerk² UG direkt über die Live-Website für ein unverbindliches Angebot.",
+        "ctaLive": "Zur Live-Website ↗",
+        "ctaBack": "Weitere Arbeiten ansehen"
+      }
     }
   },
   "metadata": {
