@@ -1,13 +1,13 @@
 export type NavLink = {
-  label: string;
+  id: "work" | "services" | "process" | "about" | "startProject";
   href: string;
   cta?: boolean;
 };
 
 export const navLinks: NavLink[] = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-  { label: "Start a project", href: "#contact", cta: true },
+  { id: "work", href: "#work" },
+  { id: "services", href: "#services" },
+  { id: "process", href: "#process" },
+  { id: "about", href: "#about" },
+  { id: "startProject", href: "#contact", cta: true },
 ];

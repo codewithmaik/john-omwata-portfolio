@@ -1,0 +1,146 @@
+{
+  "common": {
+    "work": "Emirimu",
+    "services": "Empeereza",
+    "process": "Enkola",
+    "about": "Ebikwata ku nze",
+    "contact": "Tukwatagane",
+    "startProject": "Tandika Pulojekiti"
+  },
+  "nav": {
+    "toggleMenu": "Ggulawo Menyu",
+    "languageLabel": "Olulimi"
+  },
+  "hero": {
+    "eyebrow": "Omukozi wa Yeekka ow'Emikutu gya Yintaneeti · Kampala, Uganda · Nkola Wonna",
+    "ogEyebrow": "Omukozi wa Yeekka ow'Emikutu gya Yintaneeti · Kampala, Uganda",
+    "headline": "Emikutu gy'empuliziganya egitambula mangu, <em>nga mirungi okulaba</em>, era ne gifuula abagenyi okuba ba kasitoma.",
+    "subhead": "Nkola, ne nzimba, era ne nteeka ku yintaneeti emikutu gy'empuliziganya egy'enjawulo eri bizinensi, wooteeri, situdiyo, n'abawa amagezi — omuntu omu, okuva ku ntandikwa okutuuka ku nkomerero, nga nkozesa AI okwongera obwangu naye nga sikendeeza ku mutindo.",
+    "ctaWork": "Laba emirimu gyange",
+    "ctaContact": "Tandika pulojekiti",
+    "stats": {
+      "delivered": "Emikutu Gyakolebwa",
+      "years": "Emyaka Nga Nkola ku Yintaneeti",
+      "person": "Omuntu Omu, Okuva ku Design okutuuka ku Deploy",
+      "remote": "Nsobola Okukola Nga Sili Awo"
+    },
+    "terminal": {
+      "tagline": {
+        "prefix": "Omukutu gwo, guli live ku ",
+        "highlight": "your-domain.com",
+        "suffix": " — okuva ku Design okutuuka ku Deploy, mu mulimu gumu."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Kye Nzimba",
+    "title": "Ekika kimu eky'omukutu, nga kikoleddwa bulungi — so si ebintu kkumi nga tebikoleddwa bulungi.",
+    "description": "Nsimbye amaaso ku mikutu gya yintaneeti egy'enjawulo, so si apps oba software. Kino kitegeeza nti buli pulojekiti efuna obwegendereza bwonna ku design, obwangu, n'engeri gy'erabikamu ku ssimu.",
+    "items": {
+      "businessConsultant": {
+        "title": "Emikutu gya Bizinensi n'Abawa Amagezi",
+        "description": "Emiko emirongoofu egy'empeereza, engeri z'okutuukirira, n'obukakafu obuwa abakasitoma obuvumu okukukwatako."
+      },
+      "restaurantHospitality": {
+        "title": "Emikutu gya Wooteeri n'Eby'Okusembeza",
+        "description": "Menyu, ebifaananyi, n'obukwate bw'okuwandiisa ebifo, nga byakolebwa okulaba bulungi ku ssimu nga oli ku mmeeza."
+      },
+      "studioPortfolio": {
+        "title": "Emikutu gya Situdiyo n'Emirimu",
+        "description": "Enkola z'okulaga emirimu nga y'esooka — eri abazimbi, abasobozi mu design, ne situdiyo z'obuyiiya."
+      },
+      "landingLaunch": {
+        "title": "Emikutu gy'Okutandika Ebintu",
+        "description": "Emikutu egikoleddwa ku kigendererwa kimu okusikiriza — okutandika ekintu ekipya, embaga, oba kampeyini."
+      },
+      "storefront": {
+        "title": "Emikutu gy'Amaduuka",
+        "description": "Ekitundu abaguzi kye balaba ku duuka lya yintaneeti — emiko gy'ebintu, ekiguzo, n'ensengeka y'okusasula."
+      },
+      "refreshSpeed": {
+        "title": "Okuzza Obuggya n'Okuddaabiriza Obwangu",
+        "description": "Omukutu ogukaddiye oba ogutambula mpola — nga guzimbibwa buggya oba okuddaabirizibwa awatali kutandikira ku bukalu."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Engeri Pulojekiti gy'Etambulamu",
+    "title": "Emitendera Ena. Tewali kukyusaganya, tewali kufiirwa bumanyirivu.",
+    "description": "Omuntu omu y'akola omulimu gwonna — waleme kubaawo ekifiirwa wakati w'okuwandiika design n'omukutu nga guli live.",
+    "steps": {
+      "discover": {
+        "title": "Okutegeera",
+        "description": "Emboozi mpimpi oba ebiwandiiko okutegeera bizinensi, abo b'egenderera, n'ebyo omukutu byegwetaaga okukola."
+      },
+      "design": {
+        "title": "Okuwandiika Design",
+        "description": "Endowooza ya design n'enkola y'olupapula ebiriko obulambulukufu bw'ekika — biweebwayo okufuna endowooza nga tewannawandiikibwa koodi."
+      },
+      "build": {
+        "title": "Okuzimba",
+        "description": "Koodi etambula bulungi ku ssimu ne ku kompyuta, ey'amangu era etegerekeka — egezesebbwa ku ba browser ne ebyuma ebitali bimu."
+      },
+      "deploySupport": {
+        "title": "Okussa ku Yintaneeti n'Obuyambi",
+        "description": "Omukutu gutandika okulabika ku ndagiriro yo, nga guliko okukuwa obuyambi mu kiseera ekisooka okukola enkyukakyuka ezisoose okwetaagisa."
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Emirimu Egyalondebwa",
+    "title": "Emikutu emitono egyakolebwa waakati.",
+    "description": "Emirimu gya bakasitoma n'egyokwerongoosa nze, nga giva mu by'okusembeza abagenyi, obuzimbi, n'okuwa amagezi ku masannyalaze.",
+    "viewLive": "Laba omukutu nga guli live ↗",
+    "comingSoon": "Omukutu gujja kubaawo mu bbanga ttono",
+    "items": {
+      "forno-rosso": {
+        "name": "Forno Rosso",
+        "role": "Omukutu gwa Wooteeri",
+        "description": "Omukutu ogutambula bulungi ku byuma byonna ogw'ewooteeri y'Ekiyitalya — omutwe ogutambula, menyu entegeke mu mmere ennya, n'enkola ya navigation etambula ku ssimu ng'okozesa omukono gumu."
+      },
+      "field-office": {
+        "name": "Field Office",
+        "role": "Omukutu gwa Situdiyo y'Obuzimbi",
+        "description": "Omukutu ogw'enkola ya magazini ogulimu akapande k'ebifaananyi akakola ku kusenula kwa mouse, awamu n'olukalala olutegeke olw'emirimu gya situdiyo."
+      },
+      "energiedirekt": {
+        "name": "EnergieDirekt",
+        "role": "Omukutu gwa Bizinensi y'Okuwa Amagezi",
+        "description": "Omukutu gwa bizinensi ogw'omuwa amagezi ow'amasannyalaze eyeeyimirizza — ayamba bannannyini nnyumba okugeraageranya abakola amasannyalaze, ng'alimu ekifo ky'okutuukirira mu ngeri nnyingi n'enkola y'okugeraageranya egoberera."
+      }
+    }
+  },
+  "stack": {
+    "heading": "Ebyuma ebisibuka\nbuli mulimu."
+  },
+  "about": {
+    "eyebrow": "Ebikwata ku nze",
+    "title": "Mbeera mu Kampala. Nkolera bakasitoma bonna.",
+    "paragraph1": "Ndi mukozi wa yeekka eyeeyigirizza yekka ow'emikutu gya yintaneeti, alina emyaka esatu ng'akola ku bakasitoma ab'amazima — okuva ku dashboard y'ekibiina ky'obuyambi okutuuka ku mikutu gya wooteeri n'ab'okuwa amagezi egyazimbibwa okuva ku ntandikwa.",
+    "paragraph2": "Nkozesa ebikozesebwa bya AI nga fundi w'embaawo omulungi bw'akozesa ebyuma ebya masannyalaze: okwongera obwangu, so si okukendeeza ku bumanyirivu bw'omulimu. Buli mukutu gukyakolebwa, ne gugezesebwa, ne gukebererwa layini ku layini nga tegunnabaawo live.",
+    "facts": {
+      "basedIn": { "label": "Ekifo", "value": "Kampala, Uganda" },
+      "worksWith": { "label": "Bakasitoma", "value": "Ensi Yonna" },
+      "availability": { "label": "Obukwakkulizo", "value": "Nsobola Kutandika Kaakati" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Tandika Pulojekiti",
+    "title": "Olina omukutu gw'oyagala okuzimbibwa? Ka twogere ku ky'ekyo.",
+    "subhead": "Mumbulire katono ku bizinensi yo n'ekyo omukutu ky'ogwetaaga okukola — nzija kuddamu n'ebiddako n'ekiseera ekisaanidde.",
+    "emailCta": "Mpandikira email",
+    "callCta": "Kuba essimu / WhatsApp",
+    "metaLabels": {
+      "email": "Email",
+      "phone": "Essimu",
+      "location": "Ekifo"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Omwata John Charles. Nzimbye era ne nfulumya nzekka."
+  },
+  "metadata": {
+    "title": "Omwata John Charles — Emikutu gya Yintaneeti, Ebizimbiddwa n'Obukugu",
+    "description": "Omukozi wa yeekka ow'emikutu gya yintaneeti mu Kampala, Uganda. Nkola, ne nzimba, era ne nteeka ku yintaneeti emikutu gy'empuliziganya egy'enjawulo eri bizinensi, wooteeri, situdiyo, n'abawa amagezi."
+  }
+}

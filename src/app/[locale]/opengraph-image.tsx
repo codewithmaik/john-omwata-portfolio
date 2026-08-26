@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const size = {
   width: 1200,
@@ -6,7 +8,18 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function OpengraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "hero" });
+
   return new ImageResponse(
     (
       <div
@@ -47,7 +60,7 @@ export default function OpengraphImage() {
           >
             OJ
           </div>
-          Freelance Web Developer · Kampala, Uganda
+          {t("ogEyebrow")}
         </div>
         <div
           style={{
@@ -59,8 +72,13 @@ export default function OpengraphImage() {
             maxWidth: 980,
           }}
         >
-          Websites that load fast, look sharp, and turn visitors into
-          clients.
+          {t.rich("headline", {
+            em: (chunks) => (
+              <span style={{ color: "#7fa672", fontStyle: "italic" }}>
+                {chunks}
+              </span>
+            ),
+          })}
         </div>
         <div
           style={{

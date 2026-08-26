@@ -1,8 +1,11 @@
+import { getTranslations } from "next-intl/server";
 import { trustStats } from "@/data/stats";
 import { focusRing } from "@/lib/styles";
 import DeployTerminal from "./DeployTerminal";
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations("hero");
+
   return (
     <section className="relative overflow-hidden bg-forest-deep pt-[168px] pb-[90px] text-white max-[720px]:pt-[130px] max-[720px]:pb-[70px]">
       <div
@@ -19,20 +22,19 @@ export default function Hero() {
           <div>
             <p className="mb-6 flex items-center gap-2 font-mono text-[12.5px] tracking-[0.08em] text-sage-light uppercase">
               <span className="h-[6px] w-[6px] animate-pulse rounded-full bg-sage" />
-              Freelance Web Developer · Kampala, Uganda · Remote Worldwide
+              {t("eyebrow")}
             </p>
 
             <h1 className="font-serif text-[clamp(34px,4.4vw,54px)] leading-[1.1] font-semibold max-[480px]:text-[30px]">
-              Websites that load fast,{" "}
-              <em className="font-medium text-sage italic">look sharp</em>
-              , and turn visitors into clients.
+              {t.rich("headline", {
+                em: (chunks) => (
+                  <em className="font-medium text-sage italic">{chunks}</em>
+                ),
+              })}
             </h1>
 
             <p className="mt-6 max-w-[520px] text-[16.5px] leading-relaxed text-sage-light/90">
-              I design, build, and deploy custom websites for businesses,
-              restaurants, studios, and consultants — one person, start to
-              finish, with an AI-accelerated workflow that never cuts corners
-              on quality.
+              {t("subhead")}
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -40,24 +42,24 @@ export default function Hero() {
                 href="#work"
                 className={`rounded-[3px] bg-sage px-7 py-3.5 text-[14px] font-semibold text-forest-deep transition-colors hover:bg-[#93b884] ${focusRing}`}
               >
-                View my work
+                {t("ctaWork")}
               </a>
               <a
                 href="#contact"
                 className={`rounded-[3px] border border-white/25 px-7 py-3.5 text-[14px] font-semibold text-white transition-colors hover:border-white/50 ${focusRing}`}
               >
-                Start a project
+                {t("ctaContact")}
               </a>
             </div>
 
             <div className="mt-14 grid grid-cols-4 gap-6 border-t border-line-dark pt-8 max-[720px]:grid-cols-2 max-[720px]:gap-y-8">
               {trustStats.map((stat) => (
-                <div key={stat.label}>
+                <div key={stat.id}>
                   <div className="font-serif text-[26px] font-semibold text-white">
                     {stat.value}
                   </div>
                   <div className="mt-1 font-mono text-[11.5px] tracking-wide text-sage-light/70 uppercase">
-                    {stat.label}
+                    {t(`stats.${stat.id}`)}
                   </div>
                 </div>
               ))}

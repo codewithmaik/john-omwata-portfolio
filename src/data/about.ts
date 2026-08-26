@@ -1,10 +1,9 @@
 export type Fact = {
-  label: string;
-  value: string;
+  id: "basedIn" | "worksWith" | "availability";
 };
 
 export const aboutFacts: Fact[] = [
-  { label: "Based In", value: "Kampala, Uganda" },
-  { label: "Works With", value: "Clients Worldwide" },
-  { label: "Availability", value: "Immediate Start" },
+  { id: "basedIn" },
+  { id: "worksWith" },
+  { id: "availability" },
 ];

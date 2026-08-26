@@ -10,9 +10,3 @@ export const deploySteps: DeployStep[] = [
   { command: "connect domain", result: "linked" },
   { command: "deploy --production", result: "live" },
 ];
-
-export const deployTagline = {
-  prefix: "Your site, live at ",
-  highlight: "your-domain.com",
-  suffix: " — design to deploy, one build.",
-};
