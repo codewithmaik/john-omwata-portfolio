@@ -3,6 +3,7 @@ import { workItems } from "@/data/work";
 import { focusRing } from "@/lib/styles";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import WorkThumbnail from "./WorkThumbnail";
 
 export default async function Work() {
   const t = await getTranslations("work");
@@ -23,9 +24,12 @@ export default async function Work() {
             <Reveal
               key={item.id}
               delay={index * 80}
-              className="grid grid-cols-[80px_1fr_auto] items-start gap-8 border-b border-line py-9 max-[720px]:grid-cols-1 max-[720px]:gap-4"
+              className="grid grid-cols-[96px_1fr_auto] items-start gap-8 border-b border-line py-9 max-[720px]:grid-cols-1 max-[720px]:gap-4"
             >
-              <div className="font-mono text-[13px] text-ink-soft">{item.year}</div>
+              <div className="flex flex-col items-start gap-3 max-[720px]:flex-row max-[720px]:items-center max-[720px]:gap-3">
+                <WorkThumbnail name={t(`items.${item.id}.name`)} seed={item.thumbSeed} />
+                <div className="font-mono text-[13px] text-ink-soft">{item.year}</div>
+              </div>
 
               <div>
                 <div className="font-mono text-[12px] tracking-wide text-sage uppercase">

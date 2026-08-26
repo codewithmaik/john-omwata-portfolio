@@ -93,6 +93,21 @@
     "viewLive": "Laba omukutu nga guli live ↗",
     "comingSoon": "Omukutu gujja kubaawo mu bbanga ttono",
     "items": {
+      "auszeit-mosel": {
+        "name": "Auszeit Mosel",
+        "role": "Omukutu gw'Okuwummula n'Okutambula",
+        "description": "Omukutu ogw'ekifo ky'okuwummulamu mu kiwonvu kya Mosel mu Bugirimaani — ebisingawo n'omukutu nga guli live bijja mu bbanga ttono."
+      },
+      "vd-handwerk": {
+        "name": "VD Handwerk²",
+        "role": "Empeereza y'Okulabirira Amayumba n'Obukugu",
+        "description": "Omukutu gwa bizinensi oguli mu nnimi bbiri (Ekijjaamani n'Ekirasa) ogw'ekibiina ekikola ku kulabirira amayumba n'obukugu obw'enjawulo mu Wuppertal ne Bergisches Land — nga gulimu empeereza, enkola, n'ebifaananyi by'emirimu, ekikola nti bannannyini nnyumba n'abalabirira amayumba basobola okutuukirira mangu."
+      },
+      "stromfritz": {
+        "name": "Stromfritz",
+        "role": "Akalulu k'Okugeraageranya Amasannyalaze",
+        "description": "Akalulu ak'okugeraageranya emiwendo n'abakola amasannyalaze — ebisingawo n'omukutu nga guli live bijja mu bbanga ttono."
+      },
       "forno-rosso": {
         "name": "Forno Rosso",
         "role": "Omukutu gwa Wooteeri",

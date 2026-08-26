@@ -93,6 +93,21 @@
     "viewLive": "View live site ↗",
     "comingSoon": "Live site coming soon",
     "items": {
+      "auszeit-mosel": {
+        "name": "Auszeit Mosel",
+        "role": "Hospitality & Travel Frontend",
+        "description": "A getaway-style site for a stay in Germany's Mosel valley — details and a live link are on the way."
+      },
+      "vd-handwerk": {
+        "name": "VD Handwerk²",
+        "role": "Facility Management & Handyman Services",
+        "description": "A bilingual (German/Russian) business site for a facility-management and handyman company serving Wuppertal and the Bergisches Land — services, process, and a project gallery built to help homeowners and property managers get in touch fast."
+      },
+      "stromfritz": {
+        "name": "Stromfritz",
+        "role": "Energy Comparison Tool",
+        "description": "A tool for comparing electricity tariffs and providers — details and a live link are on the way."
+      },
       "forno-rosso": {
         "name": "Forno Rosso",
         "role": "Restaurant Frontend",
