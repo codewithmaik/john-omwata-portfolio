@@ -1,10 +1,10 @@
 import { loadFont as loadMono } from "@remotion/google-fonts/IBMPlexMono";
 import { loadFont as loadSerif } from "@remotion/google-fonts/PlayfairDisplay";
+import type { ReactNode } from "react";
 import {
   AbsoluteFill,
   interpolate,
   Sequence,
-  spring,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -15,7 +15,15 @@ const { fontFamily: serifFont } = loadSerif();
 export const PROCESS_VIDEO_FPS = 30;
 export const PROCESS_VIDEO_WIDTH = 900;
 export const PROCESS_VIDEO_HEIGHT = 700;
-export const PROCESS_VIDEO_DURATION_IN_FRAMES = 225;
+
+const INTRO_LEN = 15;
+const SCENE_LEN = 85;
+const OUTRO_LEN = 45;
+const SCENE_COUNT = 4;
+const FADE_OUT_AT = SCENE_LEN - 12;
+
+export const PROCESS_VIDEO_DURATION_IN_FRAMES =
+  INTRO_LEN + SCENE_LEN * SCENE_COUNT + OUTRO_LEN;
 
 const COLORS = {
   forestDeep: "#0f211a",
@@ -25,104 +33,424 @@ const COLORS = {
   white: "#ffffff",
 };
 
-const steps = [
+const scenes = [
   { number: "01", title: "Discover" },
   { number: "02", title: "Design" },
   { number: "03", title: "Build" },
   { number: "04", title: "Deploy & Support" },
 ];
 
-const STEP_SPACING = 45;
-const STEP_START = 22;
-const CHECK_OFFSET = 30;
-
-function Step({
-  index,
-  number,
-  title,
-}: {
-  index: number;
-  number: string;
-  title: string;
-}) {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const start = STEP_START + index * STEP_SPACING;
-
-  const enter = spring({
-    frame: frame - start,
-    fps,
-    config: { damping: 200, stiffness: 180 },
-  });
-
-  const checkProgress = spring({
-    frame: frame - (start + CHECK_OFFSET),
-    fps,
-    config: { damping: 200, stiffness: 220 },
-  });
-
-  const isLast = index === steps.length - 1;
-  const lineHeight = interpolate(enter, [0, 1], [0, 64], {
+function easeIn(local: number, start: number, len = 10) {
+  return interpolate(local, [start, start + len], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
+}
 
+function sceneOpacity(local: number) {
+  return interpolate(local, [0, 10, FADE_OUT_AT, SCENE_LEN], [0, 1, 1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+}
+
+function sceneShift(local: number) {
+  return interpolate(
+    local,
+    [0, 12, FADE_OUT_AT, SCENE_LEN],
+    [14, 0, 0, -10],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+  );
+}
+
+function StepLabel({ number, title }: { number: string; title: string }) {
   return (
-    <div
-      style={{
-        position: "relative",
-        display: "flex",
-        gap: 22,
-        opacity: enter,
-        transform: `translateY(${interpolate(enter, [0, 1], [16, 0])}px)`,
-        paddingBottom: isLast ? 0 : 44,
-      }}
-    >
-      {!isLast && (
-        <div
-          style={{
-            position: "absolute",
-            top: 46,
-            left: 21,
-            width: 1,
-            height: lineHeight,
-            background: COLORS.lineDark,
-          }}
-        />
-      )}
-
+    <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
       <div
         style={{
           flexShrink: 0,
-          width: 42,
-          height: 42,
+          width: 40,
+          height: 40,
           borderRadius: "50%",
           border: `1.5px solid ${COLORS.sage}`,
-          background: `rgba(127,166,114,${checkProgress * 1})`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontFamily: monoFont,
-          fontSize: 14,
+          fontSize: 13,
           fontWeight: 600,
-          color: checkProgress > 0.5 ? COLORS.forestDeep : COLORS.sage,
+          color: COLORS.sage,
         }}
       >
-        {checkProgress > 0.5 ? "✓" : number}
+        {number}
       </div>
+      <div
+        style={{
+          fontFamily: serifFont,
+          fontSize: 25,
+          fontWeight: 600,
+          color: COLORS.white,
+        }}
+      >
+        {title}
+      </div>
+    </div>
+  );
+}
 
-      <div style={{ paddingTop: 6 }}>
+function DiscoverScene({ local }: { local: number }) {
+  const lines = [
+    "Understand the business",
+    "Map the audience",
+    "Define what the site must do",
+  ];
+  const lineStart = 20;
+  const lineGap = 13;
+
+  return (
+    <div style={{ marginTop: 40 }}>
+      <div
+        style={{
+          border: `1px solid ${COLORS.lineDark}`,
+          borderRadius: 8,
+          padding: "24px 28px",
+          background: "rgba(255,255,255,0.02)",
+        }}
+      >
         <div
           style={{
-            fontFamily: serifFont,
-            fontSize: 27,
-            fontWeight: 600,
-            color: COLORS.white,
+            fontFamily: monoFont,
+            fontSize: 13,
+            color: "rgba(255,255,255,0.4)",
+            marginBottom: 20,
           }}
         >
-          {title}
+          brief.txt
+        </div>
+        {lines.map((line, i) => {
+          const start = lineStart + i * lineGap;
+          const enter = easeIn(local, start, 10);
+          const checked = easeIn(local, start + 12, 6);
+          return (
+            <div
+              key={line}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                opacity: enter,
+                transform: `translateX(${interpolate(enter, [0, 1], [-10, 0])}px)`,
+                marginBottom: 14,
+                fontFamily: monoFont,
+                fontSize: 16,
+                color: COLORS.sageLight,
+              }}
+            >
+              <span
+                style={{
+                  color: COLORS.sage,
+                  opacity: checked,
+                  width: 14,
+                  display: "inline-block",
+                }}
+              >
+                ✓
+              </span>
+              <span>{line}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function DesignScene({ local }: { local: number }) {
+  const frameIn = easeIn(local, 14, 10);
+  const heroIn = easeIn(local, 26, 10);
+  const cardStart = 42;
+  const cardGap = 7;
+  const cards = [0, 1, 2].map((i) => easeIn(local, cardStart + i * cardGap, 10));
+
+  return (
+    <div style={{ marginTop: 40 }}>
+      <div
+        style={{
+          opacity: frameIn,
+          transform: `scale(${interpolate(frameIn, [0, 1], [0.96, 1])})`,
+          border: `1px solid ${COLORS.lineDark}`,
+          borderRadius: 8,
+          padding: 20,
+          background: "rgba(255,255,255,0.02)",
+        }}
+      >
+        <div style={{ display: "flex", gap: 6, marginBottom: 18 }}>
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              style={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                background: "rgba(255,255,255,0.2)",
+              }}
+            />
+          ))}
+        </div>
+
+        <div
+          style={{
+            opacity: heroIn,
+            transform: `translateY(${interpolate(heroIn, [0, 1], [10, 0])}px)`,
+            marginBottom: 16,
+          }}
+        >
+          <div
+            style={{
+              width: "60%",
+              height: 12,
+              borderRadius: 3,
+              background: COLORS.sage,
+              opacity: 0.85,
+              marginBottom: 8,
+            }}
+          />
+          <div
+            style={{
+              width: "40%",
+              height: 8,
+              borderRadius: 3,
+              background: "rgba(255,255,255,0.25)",
+              marginBottom: 12,
+            }}
+          />
+          <div
+            style={{
+              width: 90,
+              height: 22,
+              borderRadius: 3,
+              border: `1px solid ${COLORS.sage}`,
+            }}
+          />
+        </div>
+
+        <div style={{ display: "flex", gap: 12 }}>
+          {cards.map((c, i) => (
+            <div
+              key={i}
+              style={{
+                flex: 1,
+                height: 64,
+                borderRadius: 6,
+                border: `1px solid ${COLORS.lineDark}`,
+                opacity: c,
+                transform: `translateY(${interpolate(c, [0, 1], [8, 0])}px)`,
+              }}
+            />
+          ))}
         </div>
       </div>
+    </div>
+  );
+}
+
+function BuildScene({ local }: { local: number }) {
+  const codeLines: { text: string; color: string }[][] = [
+    [
+      { text: "export function", color: COLORS.sage },
+      { text: " Hero() {", color: COLORS.white },
+    ],
+    [{ text: "  return (", color: COLORS.white }],
+    [
+      { text: "    <section", color: COLORS.sageLight },
+      { text: " className=", color: COLORS.white },
+      { text: '"hero"', color: COLORS.sage },
+      { text: ">", color: COLORS.sageLight },
+    ],
+    [
+      { text: "      <h1>", color: COLORS.sageLight },
+      { text: "Websites that load fast", color: COLORS.white },
+      { text: "</h1>", color: COLORS.sageLight },
+    ],
+    [{ text: "    </section>", color: COLORS.sageLight }],
+    [{ text: "  );", color: COLORS.white }],
+    [{ text: "}", color: COLORS.white }],
+  ];
+
+  const lineStart = 14;
+  const lineGap = 7;
+
+  return (
+    <div style={{ marginTop: 40 }}>
+      <div
+        style={{
+          border: `1px solid ${COLORS.lineDark}`,
+          borderRadius: 8,
+          padding: "22px 26px",
+          background: "rgba(255,255,255,0.02)",
+          fontFamily: monoFont,
+          fontSize: 15,
+          lineHeight: 1.7,
+        }}
+      >
+        {codeLines.map((tokens, i) => {
+          const start = lineStart + i * lineGap;
+          const enter = easeIn(local, start, 5);
+          const isLastRevealing = local >= start && local < start + 5 && enter < 1;
+          return (
+            <div
+              key={i}
+              style={{ display: "flex", opacity: enter, whiteSpace: "pre" }}
+            >
+              <span
+                style={{
+                  width: 20,
+                  color: "rgba(255,255,255,0.25)",
+                  marginRight: 16,
+                }}
+              >
+                {i + 1}
+              </span>
+              <span>
+                {tokens.map((t, j) => (
+                  <span key={j} style={{ color: t.color }}>
+                    {t.text}
+                  </span>
+                ))}
+                {isLastRevealing && (
+                  <span
+                    style={{
+                      display: "inline-block",
+                      width: 8,
+                      height: 15,
+                      marginLeft: 2,
+                      background: COLORS.sageLight,
+                      opacity: Math.round(local / 4) % 2 === 0 ? 1 : 0,
+                    }}
+                  />
+                )}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function DeployScene({ local }: { local: number }) {
+  const commands = [
+    { cmd: "deploy --production", result: "done", start: 12 },
+    { cmd: "connect domain", result: "linked", start: 28 },
+  ];
+  const liveStart = 52;
+  const liveIn = easeIn(local, liveStart, 10);
+  const pulse = interpolate(
+    (local - liveStart) % 40,
+    [0, 20, 40],
+    [0.5, 1, 0.5],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+  );
+
+  return (
+    <div style={{ marginTop: 40 }}>
+      <div
+        style={{
+          border: `1px solid ${COLORS.lineDark}`,
+          borderRadius: 8,
+          padding: "22px 26px",
+          background: "rgba(255,255,255,0.02)",
+          fontFamily: monoFont,
+          fontSize: 15,
+        }}
+      >
+        {commands.map((c) => {
+          const typed = easeIn(local, c.start, 10);
+          const done = easeIn(local, c.start + 12, 4);
+          return (
+            <div
+              key={c.cmd}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                marginBottom: 12,
+                opacity: typed > 0 ? 1 : 0,
+              }}
+            >
+              <span style={{ color: COLORS.sage }}>$</span>
+              <span style={{ color: COLORS.sageLight }}>{c.cmd}</span>
+              <span style={{ marginLeft: "auto", color: COLORS.sage, opacity: done }}>
+                ✓ {c.result}
+              </span>
+            </div>
+          );
+        })}
+
+        <div
+          style={{
+            marginTop: 20,
+            paddingTop: 18,
+            borderTop: `1px solid ${COLORS.lineDark}`,
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            opacity: liveIn,
+            transform: `translateY(${interpolate(liveIn, [0, 1], [8, 0])}px)`,
+          }}
+        >
+          <span
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: "50%",
+              background: COLORS.sage,
+              opacity: pulse,
+            }}
+          />
+          <span style={{ color: COLORS.white, fontSize: 14 }}>Live at</span>
+          <span style={{ color: COLORS.sage, fontSize: 14 }}>your-domain.com</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Scene({
+  number,
+  title,
+  children,
+}: {
+  number: string;
+  title: string;
+  children: (local: number) => ReactNode;
+}) {
+  const frame = useCurrentFrame();
+  const opacity = sceneOpacity(frame);
+  const shift = sceneShift(frame);
+
+  return (
+    <div style={{ opacity, transform: `translateY(${shift}px)` }}>
+      <StepLabel number={number} title={title} />
+      {children(frame)}
+    </div>
+  );
+}
+
+function ProgressDots({ active }: { active: number }) {
+  return (
+    <div style={{ display: "flex", gap: 8 }}>
+      {scenes.map((_, i) => (
+        <span
+          key={i}
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: "50%",
+            background: i === active ? COLORS.sage : "rgba(255,255,255,0.18)",
+          }}
+        />
+      ))}
     </div>
   );
 }
@@ -131,26 +459,21 @@ export function ProcessVideo() {
   const frame = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
 
-  const chromeOpacity = interpolate(frame, [0, 12], [0, 1], {
+  const chromeOpacity = easeIn(frame, 0, 12);
+
+  const activeScene = Math.min(
+    Math.max(Math.floor((frame - INTRO_LEN) / SCENE_LEN), 0),
+    SCENE_COUNT - 1,
+  );
+
+  const outroStart = INTRO_LEN + SCENE_LEN * SCENE_COUNT;
+  const outroOpacity = easeIn(frame, outroStart, 20);
+
+  const fadeOutStart = durationInFrames - 15;
+  const fadeOut = interpolate(frame, [fadeOutStart, durationInFrames], [1, 0.94], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-
-  const taglineStart = STEP_START + steps.length * STEP_SPACING + 6;
-  const taglineOpacity = interpolate(
-    frame,
-    [taglineStart, taglineStart + 18],
-    [0, 1],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-  );
-
-  const fadeOutStart = durationInFrames - 18;
-  const fadeOut = interpolate(
-    frame,
-    [fadeOutStart, durationInFrames],
-    [1, 0.92],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-  );
 
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.forestDeep }}>
@@ -175,7 +498,7 @@ export function ProcessVideo() {
             display: "flex",
             alignItems: "center",
             gap: 10,
-            padding: "30px 40px",
+            padding: "26px 40px",
             borderBottom: `1px solid ${COLORS.lineDark}`,
             opacity: chromeOpacity,
           }}
@@ -202,18 +525,27 @@ export function ProcessVideo() {
           >
             process — build.log
           </span>
+          <span style={{ marginLeft: "auto" }}>
+            <ProgressDots active={activeScene} />
+          </span>
         </div>
 
-        <div
-          style={{
-            padding: "40px 44px 0",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {steps.map((step, i) => (
-            <Sequence key={step.number} from={0} layout="none">
-              <Step index={i} number={step.number} title={step.title} />
+        <div style={{ position: "relative", flex: 1, padding: "0 44px" }}>
+          {scenes.map((s, i) => (
+            <Sequence
+              key={s.number}
+              from={INTRO_LEN + i * SCENE_LEN}
+              durationInFrames={SCENE_LEN}
+              layout="none"
+            >
+              <Scene number={s.number} title={s.title}>
+                {(local) => {
+                  if (i === 0) return <DiscoverScene local={local} />;
+                  if (i === 1) return <DesignScene local={local} />;
+                  if (i === 2) return <BuildScene local={local} />;
+                  return <DeployScene local={local} />;
+                }}
+              </Scene>
             </Sequence>
           ))}
         </div>
@@ -221,9 +553,8 @@ export function ProcessVideo() {
         <div
           style={{
             padding: "0 44px 40px",
-            marginTop: "auto",
-            opacity: taglineOpacity,
-            transform: `translateY(${interpolate(taglineOpacity, [0, 1], [10, 0])}px)`,
+            opacity: outroOpacity,
+            transform: `translateY(${interpolate(outroOpacity, [0, 1], [10, 0])}px)`,
           }}
         >
           <div
@@ -236,8 +567,7 @@ export function ProcessVideo() {
               color: "rgba(255,255,255,0.65)",
             }}
           >
-            One person, start to{" "}
-            <span style={{ color: COLORS.sage }}>finish.</span>
+            One person, start to <span style={{ color: COLORS.sage }}>finish.</span>
           </div>
         </div>
       </div>

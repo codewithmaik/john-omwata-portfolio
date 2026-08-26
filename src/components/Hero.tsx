@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { trustStats } from "@/data/stats";
 import { focusRing } from "@/lib/styles";
+import CountUp from "./CountUp";
 import DeployTerminal from "./DeployTerminal";
 
 export default async function Hero() {
@@ -53,11 +54,14 @@ export default async function Hero() {
             </div>
 
             <div className="mt-14 grid grid-cols-4 gap-6 border-t border-line-dark pt-8 max-[720px]:grid-cols-2 max-[720px]:gap-y-8">
-              {trustStats.map((stat) => (
+              {trustStats.map((stat, index) => (
                 <div key={stat.id}>
-                  <div className="font-serif text-[26px] font-semibold text-white">
-                    {stat.value}
-                  </div>
+                  <CountUp
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    delay={index * 120}
+                    className="block font-serif text-[26px] font-semibold text-white"
+                  />
                   <div className="mt-1 font-mono text-[11.5px] tracking-wide text-sage-light/70 uppercase">
                     {t(`stats.${stat.id}`)}
                   </div>
