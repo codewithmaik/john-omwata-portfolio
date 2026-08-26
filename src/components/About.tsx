@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { aboutFacts } from "@/data/about";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function About() {
@@ -7,7 +8,7 @@ export default function About() {
     <section id="about" className="bg-cream py-[100px] max-[720px]:py-[70px]">
       <div className="mx-auto max-w-[1180px] px-8 max-[480px]:px-5">
         <div className="grid grid-cols-[300px_1fr] gap-16 max-[920px]:grid-cols-1 max-[920px]:gap-10">
-          <div className="relative mx-auto w-full max-w-[300px] max-[920px]:max-w-[260px]">
+          <Reveal className="relative mx-auto w-full max-w-[300px] max-[920px]:max-w-[260px]">
             <div
               aria-hidden="true"
               className="absolute -right-4 -bottom-4 h-full w-full rounded-sm border border-sage"
@@ -21,9 +22,9 @@ export default function About() {
                 className="object-cover grayscale-[15%]"
               />
             </div>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={100}>
             <SectionHeading
               eyebrow="About"
               title="Based in Kampala. Working with clients everywhere."
@@ -54,7 +55,7 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
