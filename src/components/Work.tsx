@@ -1,21 +1,25 @@
 import { workItems } from "@/data/work";
 import { focusRing } from "@/lib/styles";
+import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 export default function Work() {
   return (
     <section id="work" className="bg-cream py-[100px] max-[720px]:py-[70px]">
       <div className="mx-auto max-w-[1180px] px-8 max-[480px]:px-5">
-        <SectionHeading
-          eyebrow="Selected Work"
-          title="A few sites built recently."
-          description="Client work and self-directed practice pieces, spanning hospitality, architecture, and energy consulting."
-        />
+        <Reveal>
+          <SectionHeading
+            eyebrow="Selected Work"
+            title="A few sites built recently."
+            description="Client work and self-directed practice pieces, spanning hospitality, architecture, and energy consulting."
+          />
+        </Reveal>
 
         <div className="mt-14 border-t border-line">
-          {workItems.map((item) => (
-            <div
+          {workItems.map((item, index) => (
+            <Reveal
               key={item.name}
+              delay={index * 80}
               className="grid grid-cols-[80px_1fr_auto] items-start gap-8 border-b border-line py-9 max-[720px]:grid-cols-1 max-[720px]:gap-4"
             >
               <div className="font-mono text-[13px] text-ink-soft">{item.year}</div>
@@ -56,7 +60,7 @@ export default function Work() {
                   Live site coming soon
                 </span>
               )}
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
