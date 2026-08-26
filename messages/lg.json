@@ -91,6 +91,7 @@
     "title": "Emikutu emitono egyakolebwa waakati.",
     "description": "Emirimu gya bakasitoma n'egyokwerongoosa nze, nga giva mu by'okusembeza abagenyi, obuzimbi, n'okuwa amagezi ku masannyalaze.",
     "viewLive": "Laba omukutu nga guli live ↗",
+    "viewCaseStudy": "Laba okwekenneenya kwa pulojekiti →",
     "comingSoon": "Omukutu gujja kubaawo mu bbanga ttono",
     "items": {
       "auszeit-mosel": {
@@ -153,6 +154,117 @@
   },
   "footer": {
     "copyright": "© {year} Omwata John Charles. Nzimbye era ne nfulumya nzekka."
+  },
+  "caseStudy": {
+    "vdHandwerk": {
+      "eyebrow": "Okwekenneenya kwa Pulojekiti",
+      "name": "VD Handwerk² UG",
+      "tagline": "Byonna ebikwata ku nnyumba — okuva mu kifo kimu",
+      "metaArea": "Ekitundu ekisukka mu kilomita 60 okwetooloola Wuppertal ne Bergisches Land",
+      "backLink": "← Ddayo ku mirimu gyonna",
+      "ctaLiveSite": "Laba omukutu nga guli live ↗",
+      "services": {
+        "eyebrow": "Empeereza",
+        "title": "Byonna nnyumba by'eetaaga — okuva mu kibiina kimu.",
+        "description": "Okuva ku kulabirira okutuukiridde okutuuka ku kuggyawo ddala: omuntu omu gw'osobola okutuukirira — oba oli nnannyini nnyumba, omulabirira w'amayumba, oba bizinensi.",
+        "items": {
+          "hausmeister": {
+            "title": "Okulabirira Amayumba n'Ebizimbe",
+            "description": "Okulabirira n'okukuuma amayumba n'ebizimbe eby'obusuubuzi mu ngeri etuukiridde."
+          },
+          "garten": {
+            "title": "Okulabirira Ennimiro",
+            "description": "Okulabirira obulijjo obudduka, ebisiikirize, n'ebifo eby'ebweru."
+          },
+          "reinigung": {
+            "title": "Okuyonja",
+            "description": "Okuyonja munda n'ebweru eri amaka n'ebifo by'obusuubuzi."
+          },
+          "kleinreparaturen": {
+            "title": "Okuddaabiriza Obutono",
+            "description": "Okuddaabiriza okw'amangu era okutali kuzibu munda n'ebweru w'ennyumba."
+          },
+          "montage": {
+            "title": "Okusiba n'Okuteeka",
+            "description": "Okusiba ebintu, ebyuma, n'ebisaanyizo."
+          },
+          "renovierung": {
+            "title": "Okuzimba Obuggya n'Okutunuula Munda",
+            "description": "Okuzza obuggya n'okukyusa ebifo by'okubeeramu n'okukolerangamu."
+          },
+          "umzug": {
+            "title": "Okusenguka n'Okutambuza",
+            "description": "Okutegeka n'okukola okusenguka, nga kw'otadde n'okutambuza ebintu."
+          },
+          "rueckbau": {
+            "title": "Okuggyawo Ebizimbe",
+            "description": "Okuggyawo mu ngeri ey'obukugu ebyongezeddwa, ebiteekeddwa, n'ebyuma."
+          },
+          "entruempelung": {
+            "title": "Okuggyawo Ddala",
+            "description": "Okuggyawo ddala mu maka, mu ttulusiro, ne mu by'obusika."
+          }
+        }
+      },
+      "about": {
+        "eyebrow": "Ebikwata ku bo",
+        "title": "Munywanyi wo omwesigwa mu Wuppertal",
+        "paragraph": "VD Handwerk² UG akolera amaka, abalabirira b'amayumba, ne bizinensi mu Wuppertal ne Bergisches Land yonna — ekibiina kimu ekikola ku kulabirira ebizimbe, emirimu gy'obukugu, n'okutambuza, mu kifo ky'okuteekateeka emirimu egy'enjawulo egy'enjawulo."
+      },
+      "process": {
+        "eyebrow": "Enkola",
+        "title": "Engeri omulimu gwe gutambulamu.",
+        "steps": {
+          "anfrage": {
+            "title": "Okubuuza",
+            "description": "Ebisingawo ebimpi ku mulimu, nga kuyita mu ssimu, email, oba fformu y'okutuukirira."
+          },
+          "vorortTermin": {
+            "title": "Okukyalira Ekifo",
+            "description": "Okwekenneenya omulimu n'okugeraageranya ssente ku kifo mwennyini."
+          },
+          "angebot": {
+            "title": "Ekiwandiiko ky'Omuwendo",
+            "description": "Ekiwandiiko eky'omuwendo ekirambulukufu awatali nsimbi zikwekeddwa."
+          },
+          "umsetzung": {
+            "title": "Okutuukiriza",
+            "description": "Okukola omulimu mu bwesigwa mu kiseera ekyakkirizibwa."
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "Emirimu Egyakolebwa",
+        "title": "Emirimu Egyalondebwa",
+        "note": "Ebifaananyi eby'oluberyeberye n'oluvannyuma bijja mu bbanga ttono.",
+        "placeholderAlt": "Ekifaananyi ekiterekeddwa — ekifaananyi ky'omulimu kijja mu bbanga ttono"
+      },
+      "faq": {
+        "eyebrow": "Ebibuuzo",
+        "title": "Ebibuuzo Ebisinga Okubuuzibwa",
+        "items": {
+          "q1": {
+            "question": "Mukolera mu kitundu ki?",
+            "answer": "Mu bulambulukufu obw'obudde bwa kilomita 60 okwetooloola Wuppertal, mu Bergisches Land yonna."
+          },
+          "q2": {
+            "question": "Mukola n'emirimu emitono?",
+            "answer": "Yee — okuva ku kuddaabiriza okwangu okutuuka ku kuggyawo ddala."
+          },
+          "q3": {
+            "question": "Mwogera Lulasa?",
+            "answer": "Yee, omukutu n'okubuulirira bisangibwa mu Lujjaamani ne mu Lulasa."
+          }
+        }
+      },
+      "contact": {
+        "eyebrow": "Tukwatagane",
+        "title": "Olina pulojekiti ekwata ku nnyumba?",
+        "subhead": "Tuukirira VD Handwerk² UG butereevu ku mukutu gwabwe nga guli live okufuna omuwendo ogutali gwa kweyama.",
+        "ctaLive": "Laba omukutu nga guli live ↗",
+        "ctaBack": "Laba emirimu emirala"
+      }
+    }
   },
   "metadata": {
     "title": "Omwata John Charles — Emikutu gya Yintaneeti, Ebizimbiddwa n'Obukugu",

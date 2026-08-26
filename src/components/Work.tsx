@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { workItems } from "@/data/work";
 import { focusRing } from "@/lib/styles";
+import { Link } from "@/i18n/navigation";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import WorkThumbnail from "./WorkThumbnail";
@@ -53,20 +54,30 @@ export default async function Work() {
                 </ul>
               </div>
 
-              {item.href ? (
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener"
-                  className={`w-fit shrink-0 rounded-[3px] bg-sage-light px-4 py-2 font-mono text-[13px] font-medium text-forest-deep transition-colors hover:bg-sage ${focusRing}`}
-                >
-                  {t("viewLive")}
-                </a>
-              ) : (
-                <span className="w-fit shrink-0 cursor-default font-mono text-[13px] text-ink-soft/60">
-                  {t("comingSoon")}
-                </span>
-              )}
+              <div className="flex shrink-0 flex-col items-end gap-2 max-[720px]:items-start">
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener"
+                    className={`w-fit rounded-[3px] bg-sage-light px-4 py-2 font-mono text-[13px] font-medium text-forest-deep transition-colors hover:bg-sage ${focusRing}`}
+                  >
+                    {t("viewLive")}
+                  </a>
+                ) : (
+                  <span className="w-fit cursor-default font-mono text-[13px] text-ink-soft/60">
+                    {t("comingSoon")}
+                  </span>
+                )}
+                {item.caseStudySlug && (
+                  <Link
+                    href={`/work/${item.caseStudySlug}`}
+                    className={`w-fit font-mono text-[12.5px] text-forest transition-colors hover:text-sage ${focusRing}`}
+                  >
+                    {t("viewCaseStudy")}
+                  </Link>
+                )}
+              </div>
             </Reveal>
           ))}
         </div>

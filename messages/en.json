@@ -91,6 +91,7 @@
     "title": "A few sites built recently.",
     "description": "Client work and self-directed practice pieces, spanning hospitality, architecture, and energy consulting.",
     "viewLive": "View live site ↗",
+    "viewCaseStudy": "View case study →",
     "comingSoon": "Live site coming soon",
     "items": {
       "auszeit-mosel": {
@@ -153,6 +154,117 @@
   },
   "footer": {
     "copyright": "© {year} Omwata John Charles. Built and deployed by me."
+  },
+  "caseStudy": {
+    "vdHandwerk": {
+      "eyebrow": "Case Study",
+      "name": "VD Handwerk² UG",
+      "tagline": "Everything for the home — from one source",
+      "metaArea": "60+ km service radius around Wuppertal and the Bergisches Land",
+      "backLink": "← Back to all work",
+      "ctaLiveSite": "View live site ↗",
+      "services": {
+        "eyebrow": "Services",
+        "title": "Everything a home needs — from one team.",
+        "description": "From ongoing caretaking to a full clear-out: one point of contact for private households, property managers, and businesses.",
+        "items": {
+          "hausmeister": {
+            "title": "Property & Facility Management",
+            "description": "Ongoing care and upkeep of residential and commercial properties."
+          },
+          "garten": {
+            "title": "Garden Maintenance",
+            "description": "Regular upkeep of green spaces, hedges, and outdoor areas."
+          },
+          "reinigung": {
+            "title": "Cleaning",
+            "description": "Interior and exterior cleaning for private households and commercial properties."
+          },
+          "kleinreparaturen": {
+            "title": "Minor Repairs",
+            "description": "Fast, uncomplicated repairs in and around the home."
+          },
+          "montage": {
+            "title": "Assembly & Installation",
+            "description": "Assembly of furniture, appliances, and fittings."
+          },
+          "renovierung": {
+            "title": "Renovation & Interior Finishing",
+            "description": "Modernizing and reshaping living and working spaces."
+          },
+          "umzug": {
+            "title": "Moving & Logistics",
+            "description": "Organizing and carrying out moves, transport included."
+          },
+          "rueckbau": {
+            "title": "Deconstruction",
+            "description": "Professional removal of extensions, fixtures, and installations."
+          },
+          "entruempelung": {
+            "title": "Estate & Property Clearance",
+            "description": "Complete clear-outs of apartments, basements, and estates."
+          }
+        }
+      },
+      "about": {
+        "eyebrow": "About",
+        "title": "Your reliable partner in Wuppertal",
+        "paragraph": "VD Handwerk² UG serves private households, property managers, and businesses across Wuppertal and the Bergisches Land — one team covering facility management, handyman work, and logistics, instead of coordinating several trades separately."
+      },
+      "process": {
+        "eyebrow": "Process",
+        "title": "How a project runs.",
+        "steps": {
+          "anfrage": {
+            "title": "Enquiry",
+            "description": "A short description of the job by phone, email, or contact form."
+          },
+          "vorortTermin": {
+            "title": "On-site Visit",
+            "description": "An assessment of scope and cost on location."
+          },
+          "angebot": {
+            "title": "Quote",
+            "description": "A transparent quote with no hidden costs."
+          },
+          "umsetzung": {
+            "title": "Execution",
+            "description": "Reliable delivery within the agreed timeframe."
+          }
+        }
+      },
+      "gallery": {
+        "eyebrow": "References",
+        "title": "Selected projects",
+        "note": "Before-and-after photos are on the way.",
+        "placeholderAlt": "Placeholder — project photo coming soon"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently asked questions",
+        "items": {
+          "q1": {
+            "question": "What area do you cover?",
+            "answer": "Around a 60 km radius of Wuppertal, across the Bergisches Land."
+          },
+          "q2": {
+            "question": "Do you take on smaller jobs too?",
+            "answer": "Yes — from a quick repair to a full deconstruction."
+          },
+          "q3": {
+            "question": "Do you speak Russian?",
+            "answer": "Yes, the site and consultations are available in German and Russian."
+          }
+        }
+      },
+      "contact": {
+        "eyebrow": "Contact",
+        "title": "Got a project around the house?",
+        "subhead": "Get in touch with VD Handwerk² UG directly through the live site for a no-obligation quote.",
+        "ctaLive": "Visit the live site ↗",
+        "ctaBack": "See more work"
+      }
+    }
   },
   "metadata": {
     "title": "Omwata John Charles — Websites, Designed & Built",
