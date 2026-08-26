@@ -1,23 +1,26 @@
+import { getTranslations } from "next-intl/server";
 import { processSteps } from "@/data/process";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-export default function Process() {
+export default async function Process() {
+  const t = await getTranslations("process");
+
   return (
     <section id="process" className="bg-forest-deep py-[100px] text-white max-[720px]:py-[70px]">
       <div className="mx-auto max-w-[1180px] px-8 max-[480px]:px-5">
         <Reveal>
           <SectionHeading
             variant="dark"
-            eyebrow="How a Project Runs"
-            title="Four steps. No handoffs, no lost context."
-            description="One person owns the whole build — so nothing gets lost between the design file and the live site."
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
           />
         </Reveal>
 
         <ol className="mt-14 max-w-[640px]">
           {processSteps.map((step, index) => (
-            <li key={step.number} className="relative pb-12 last:pb-0">
+            <li key={step.id} className="relative pb-12 last:pb-0">
               {index !== processSteps.length - 1 && (
                 <span
                   aria-hidden="true"
@@ -30,10 +33,10 @@ export default function Process() {
                 </span>
                 <div className="pt-2">
                   <h3 className="font-serif text-[19px] font-semibold text-white">
-                    {step.title}
+                    {t(`steps.${step.id}.title`)}
                   </h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-sage-light/80">
-                    {step.description}
+                    {t(`steps.${step.id}.description`)}
                   </p>
                 </div>
               </Reveal>

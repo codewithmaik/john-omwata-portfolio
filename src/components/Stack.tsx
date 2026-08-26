@@ -1,16 +1,20 @@
+import { getTranslations } from "next-intl/server";
 import { stackItems } from "@/data/stack";
 import Reveal from "./Reveal";
 
-export default function Stack() {
+export default async function Stack() {
+  const t = await getTranslations("stack");
+  const [headingLine1, headingLine2] = t("heading").split("\n");
+
   return (
     <section className="bg-cream py-[100px] max-[720px]:py-[70px]">
       <div className="mx-auto max-w-[1180px] px-8 max-[480px]:px-5">
         <div className="grid grid-cols-[280px_1fr] gap-12 max-[920px]:grid-cols-1">
           <Reveal>
             <h2 className="font-serif text-[clamp(26px,3vw,36px)] leading-[1.2] font-semibold text-forest">
-              Tools behind
+              {headingLine1}
               <br />
-              every build.
+              {headingLine2}
             </h2>
           </Reveal>
 

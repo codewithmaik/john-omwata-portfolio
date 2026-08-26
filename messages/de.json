@@ -1,0 +1,146 @@
+{
+  "common": {
+    "work": "Arbeiten",
+    "services": "Leistungen",
+    "process": "Ablauf",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "startProject": "Projekt starten"
+  },
+  "nav": {
+    "toggleMenu": "Menü öffnen",
+    "languageLabel": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Freiberuflicher Webentwickler · Kampala, Uganda · Weltweit remote",
+    "ogEyebrow": "Freiberuflicher Webentwickler · Kampala, Uganda",
+    "headline": "Websites, die schnell laden, <em>gut aussehen</em> und aus Besuchern Kunden machen.",
+    "subhead": "Ich entwerfe, baue und veröffentliche individuelle Websites für Unternehmen, Restaurants, Studios und Beratungen — eine Person, von Anfang bis Ende, mit einem KI-gestützten Workflow, der bei der Qualität keine Kompromisse macht.",
+    "ctaWork": "Meine Arbeiten ansehen",
+    "ctaContact": "Projekt starten",
+    "stats": {
+      "delivered": "Websites umgesetzt",
+      "years": "Jahre Web-Erfahrung",
+      "person": "Person, von Design bis Deploy",
+      "remote": "Remote-fähig"
+    },
+    "terminal": {
+      "tagline": {
+        "prefix": "Deine Website, live unter ",
+        "highlight": "your-domain.com",
+        "suffix": " — von Design bis Deploy, in einem Guss."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Was ich baue",
+    "title": "Eine Art von Website, richtig gemacht — statt zehn Dinge nur halb.",
+    "description": "Ich konzentriere mich auf individuelle Websites, nicht auf Apps oder Software-Produkte. So bekommt jedes Projekt volle Aufmerksamkeit bei Design, Ladezeit und mobiler Darstellung.",
+    "items": {
+      "businessConsultant": {
+        "title": "Unternehmens- & Beratungs-Websites",
+        "description": "Klare Leistungsseiten, Kontaktwege und Vertrauenssignale, die Kunden zur Anfrage bewegen."
+      },
+      "restaurantHospitality": {
+        "title": "Restaurant- & Gastro-Websites",
+        "description": "Speisekarten, Galerien und Reservierungslinks, die auch am Esstisch auf dem Handy gut aussehen."
+      },
+      "studioPortfolio": {
+        "title": "Studio- & Portfolio-Websites",
+        "description": "Redaktionelle Layouts, die die Arbeit sprechen lassen — für Architektur-, Design- und Kreativstudios."
+      },
+      "landingLaunch": {
+        "title": "Landing- & Launch-Seiten",
+        "description": "Fokussierte Seiten für einen klaren Zweck — Produktlaunch, Event oder Kampagne."
+      },
+      "storefront": {
+        "title": "Storefront-Frontends",
+        "description": "Die kundenseitige Oberfläche eines Onlineshops — Produktseiten, Warenkorb und Checkout-UI."
+      },
+      "refreshSpeed": {
+        "title": "Relaunch & Performance-Fixes",
+        "description": "Eine bestehende, langsame oder veraltete Website — überarbeitet oder repariert, ohne bei null anzufangen."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "So läuft ein Projekt",
+    "title": "Vier Schritte. Keine Übergaben, kein Kontextverlust.",
+    "description": "Eine Person verantwortet den gesamten Build — so geht zwischen Entwurf und Live-Website nichts verloren.",
+    "steps": {
+      "discover": {
+        "title": "Verstehen",
+        "description": "Ein kurzes Gespräch oder Briefing, um Geschäft, Zielgruppe und Anforderungen an die Website zu klären."
+      },
+      "design": {
+        "title": "Entwerfen",
+        "description": "Eine visuelle Richtung und ein Seitenlayout passend zur Marke — zur Abstimmung, bevor Code geschrieben wird."
+      },
+      "build": {
+        "title": "Umsetzen",
+        "description": "Responsiver, schneller, barrierearmer Code — getestet über Browser und Geräte hinweg, nicht nur auf meinem eigenen."
+      },
+      "deploySupport": {
+        "title": "Live gehen & Support",
+        "description": "Die Website geht auf deiner Domain live, mit kurzer Übergabe und Support-Fenster für die ersten Anpassungen."
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Ausgewählte Arbeiten",
+    "title": "Ein paar zuletzt gebaute Websites.",
+    "description": "Kundenprojekte und eigene Übungsarbeiten aus Gastronomie, Architektur und Energieberatung.",
+    "viewLive": "Live-Website ansehen ↗",
+    "comingSoon": "Live-Website folgt in Kürze",
+    "items": {
+      "forno-rosso": {
+        "name": "Forno Rosso",
+        "role": "Restaurant-Frontend",
+        "description": "Eine vollständig responsive Website für eine italienische Trattoria — animierter Hero-Bereich, eine strukturierte Speisekarte über vier Gänge und eine mobile Slide-in-Navigation für die Bedienung mit einer Hand."
+      },
+      "field-office": {
+        "name": "Field Office",
+        "role": "Frontend für ein Architekturstudio",
+        "description": "Eine redaktionell gestaltete Website mit einem interaktiven Canvas-Bauplan-Raster, das auf Mausbewegungen reagiert, sowie einem strukturierten Projektindex für das Portfolio des Studios."
+      },
+      "energiedirekt": {
+        "name": "EnergieDirekt",
+        "role": "Website für ein Beratungsunternehmen",
+        "description": "Eine Business-Website für einen unabhängigen Energieberater — hilft Hausbesitzern beim Anbietervergleich, mit zentraler Kontaktstelle und geführtem Vergleichsablauf."
+      }
+    }
+  },
+  "stack": {
+    "heading": "Werkzeuge hinter\njedem Projekt."
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "title": "Zuhause in Kampala. Im Einsatz für Kunden überall.",
+    "paragraph1": "Ich bin autodidaktischer Webentwickler mit drei Jahren praktischer Erfahrung im Bau von Websites für echte Kunden — von einem Wirkungs-Dashboard für eine NGO bis zu Restaurant- und Beratungs-Websites von Grund auf.",
+    "paragraph2": "Ich nutze KI-Werkzeuge wie ein guter Schreiner seine Elektrowerkzeuge: um schneller zu arbeiten, nicht um am Handwerk zu sparen. Jede Website wird weiterhin Zeile für Zeile entworfen, getestet und geprüft, bevor sie live geht.",
+    "facts": {
+      "basedIn": { "label": "Standort", "value": "Kampala, Uganda" },
+      "worksWith": { "label": "Kunden", "value": "Weltweit" },
+      "availability": { "label": "Verfügbarkeit", "value": "Sofort verfügbar" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Projekt starten",
+    "title": "Eine Website geplant? Lass uns darüber sprechen.",
+    "subhead": "Erzähl mir kurz von deinem Geschäft und was die Website leisten soll — ich melde mich mit nächsten Schritten und einem groben Zeitplan.",
+    "emailCta": "E-Mail schreiben",
+    "callCta": "Anrufen / WhatsApp",
+    "metaLabels": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "location": "Standort"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Omwata John Charles. Selbst gebaut und veröffentlicht."
+  },
+  "metadata": {
+    "title": "Omwata John Charles — Websites, entworfen & gebaut",
+    "description": "Freiberuflicher Webentwickler in Kampala, Uganda. Ich entwerfe, baue und veröffentliche individuelle Websites für Unternehmen, Restaurants, Studios und Beratungen."
+  }
+}

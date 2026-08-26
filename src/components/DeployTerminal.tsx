@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { deploySteps, deployTagline } from "@/data/deploy-steps";
+import { useTranslations } from "next-intl";
+import { deploySteps } from "@/data/deploy-steps";
 
 type Line = {
   command: string;
@@ -13,6 +14,7 @@ const TYPE_DELAY = 620;
 const LINE_PAUSE = 420;
 
 export default function DeployTerminal() {
+  const t = useTranslations("hero.terminal.tagline");
   const [lines, setLines] = useState<Line[]>([]);
   const [showTagline, setShowTagline] = useState(false);
 
@@ -86,9 +88,9 @@ export default function DeployTerminal() {
         ))}
         {showTagline && (
           <p className="mt-4 border-t border-white/10 pt-4 text-[12.5px] leading-relaxed text-white/70">
-            {deployTagline.prefix}
-            <span className="text-sage">{deployTagline.highlight}</span>
-            {deployTagline.suffix}
+            {t("prefix")}
+            <span className="text-sage">{t("highlight")}</span>
+            {t("suffix")}
           </p>
         )}
       </div>

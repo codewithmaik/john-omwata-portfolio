@@ -6,7 +6,7 @@ export const contactInfo = {
 };
 
 export const contactMeta = [
-  { label: "Email", value: contactInfo.email, href: `mailto:${contactInfo.email}` },
-  { label: "Phone", value: contactInfo.phone, href: contactInfo.phoneHref },
-  { label: "Location", value: contactInfo.location },
+  { id: "email", value: contactInfo.email, href: `mailto:${contactInfo.email}` },
+  { id: "phone", value: contactInfo.phone, href: contactInfo.phoneHref },
+  { id: "location", value: contactInfo.location },
 ];

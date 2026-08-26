@@ -6,30 +6,51 @@ Internal notes for maintaining and extending this project. Not linked from the s
 
 - Next.js 16 (App Router), TypeScript, Tailwind CSS v4
 - Fonts loaded via `next/font/google`: Playfair Display (headings), DM Sans (body), IBM Plex Mono (eyebrows, labels, technical accents)
-- No backend, no database, no CMS — content lives in `src/data/*.ts`
+- i18n via `next-intl` — English (default), German, Luganda
+- No backend, no database, no CMS — content lives in `src/data/*.ts` and
+  `messages/*.json`
 
 ## Structure
 
 ```
+messages/
+  en.json / de.json / lg.json  Translated copy, one file per locale,
+                                nested by section (matches component names)
 src/
+  i18n/
+    routing.ts            Locale list, default locale, localePrefix config
+    navigation.ts          Locale-aware Link/usePathname/useRouter
+    request.ts              Loads the message file for the active locale
+  proxy.ts                 next-intl middleware — device-language detection
+                            on first visit, NEXT_LOCALE cookie persistence
   app/
-    layout.tsx          Root layout, fonts, metadata (title/description/OG/Twitter)
-    page.tsx             Assembles all sections in order
-    globals.css          Tailwind import + theme tokens (colors, fonts)
-    icon.tsx              Favicon (generated)
-    apple-icon.tsx        Apple touch icon (generated)
-    opengraph-image.tsx   Social share image (generated)
-  components/            One component per section, plus shared pieces
-                          (SectionHeading, Reveal, DeployTerminal)
-  data/                  Typed content arrays — edit these to change copy,
-                          not the components
-  lib/styles.ts           Shared class-string constants (e.g. focus ring)
-public/images/            Static assets (about portrait)
+    [locale]/
+      layout.tsx           Root layout (owns <html>/<body>), fonts, locale
+                            validation, per-locale metadata
+      page.tsx             Assembles all sections in order
+      opengraph-image.tsx   Social share image (generated, per locale)
+    globals.css            Tailwind import + theme tokens (colors, fonts)
+    icon.tsx                Favicon (generated, shared across locales)
+    apple-icon.tsx          Apple touch icon (generated, shared across locales)
+  components/              One component per section, plus shared pieces
+                            (SectionHeading, Reveal, DeployTerminal). Server
+                            components call `getTranslations`; the client
+                            Header uses `useTranslations`.
+  data/                    Typed content arrays — locale-invariant fields
+                            only (ids, years, tags, hrefs). Prose lives in
+                            `messages/*.json`, keyed by each item's `id`.
+  lib/styles.ts             Shared class-string constants (e.g. focus ring)
+public/images/              Static assets (about portrait)
 ```
 
-To change site copy (services, work items, process steps, stats, contact
-info, nav links), edit the relevant file in `src/data/` — the components
-just render whatever is in there.
+To change site copy, edit the matching key in all three `messages/*.json`
+files (English is the source of truth — add a key there first). To change
+structural fields (years, tags, live-site links, item order), edit the
+relevant file in `src/data/`.
+
+Next.js 16's auto-generated `AGENTS.md`/`CLAUDE.md` file convention is
+disabled (`agentRules: false` in `next.config.ts`) — those files must not
+exist in this repo.
 
 ## Conventions
 

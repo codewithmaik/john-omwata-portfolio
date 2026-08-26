@@ -1,7 +1,10 @@
+import { getTranslations } from "next-intl/server";
 import { contactInfo, contactMeta } from "@/data/contact";
 import { focusRing } from "@/lib/styles";
 
-export default function Contact() {
+export default async function Contact() {
+  const t = await getTranslations("contact");
+
   return (
     <section
       id="contact"
@@ -18,14 +21,13 @@ export default function Contact() {
 
       <div className="relative mx-auto max-w-[720px] px-8 max-[480px]:px-5">
         <p className="mb-4 font-mono text-[12.5px] tracking-[0.08em] text-sage uppercase">
-          Start a Project
+          {t("eyebrow")}
         </p>
         <h2 className="font-serif text-[clamp(28px,4vw,42px)] leading-[1.15] font-semibold text-white">
-          Have a site to build? Let&apos;s talk about it.
+          {t("title")}
         </h2>
         <p className="mx-auto mt-5 max-w-[480px] text-[16px] leading-relaxed text-sage-light/80">
-          Tell me a bit about the business and what the site needs to do —
-          I&apos;ll reply with next steps and a rough timeline.
+          {t("subhead")}
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
@@ -33,21 +35,21 @@ export default function Contact() {
             href={`mailto:${contactInfo.email}?subject=Website%20project%20enquiry`}
             className={`rounded-[3px] bg-sage px-7 py-3.5 text-[14px] font-semibold text-forest-deep transition-colors hover:bg-[#93b884] ${focusRing}`}
           >
-            Email me
+            {t("emailCta")}
           </a>
           <a
             href={contactInfo.phoneHref}
             className={`rounded-[3px] border border-white/25 px-7 py-3.5 text-[14px] font-semibold text-white transition-colors hover:border-white/50 ${focusRing}`}
           >
-            Call / WhatsApp
+            {t("callCta")}
           </a>
         </div>
 
         <div className="mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 border-t border-line-dark pt-8 max-[720px]:flex-col">
           {contactMeta.map((item) => (
-            <div key={item.label}>
+            <div key={item.id}>
               <div className="font-mono text-[11.5px] tracking-wide text-sage-light/60 uppercase">
-                {item.label}
+                {t(`metaLabels.${item.id}`)}
               </div>
               {item.href ? (
                 <a

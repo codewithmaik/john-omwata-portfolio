@@ -1,0 +1,146 @@
+{
+  "common": {
+    "work": "Work",
+    "services": "Services",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "startProject": "Start a project"
+  },
+  "nav": {
+    "toggleMenu": "Toggle menu",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "Freelance Web Developer · Kampala, Uganda · Remote Worldwide",
+    "ogEyebrow": "Freelance Web Developer · Kampala, Uganda",
+    "headline": "Websites that load fast, <em>look sharp</em>, and turn visitors into clients.",
+    "subhead": "I design, build, and deploy custom websites for businesses, restaurants, studios, and consultants — one person, start to finish, with an AI-accelerated workflow that never cuts corners on quality.",
+    "ctaWork": "View my work",
+    "ctaContact": "Start a project",
+    "stats": {
+      "delivered": "Websites Delivered",
+      "years": "Years Building for the Web",
+      "person": "Person, Design to Deploy",
+      "remote": "Remote-Ready"
+    },
+    "terminal": {
+      "tagline": {
+        "prefix": "Your site, live at ",
+        "highlight": "your-domain.com",
+        "suffix": " — design to deploy, one build."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "What I Build",
+    "title": "One website type, done properly — not ten things done half-way.",
+    "description": "I focus on custom websites, not apps or software products. That means every project gets full attention on design, speed, and how it reads on a phone.",
+    "items": {
+      "businessConsultant": {
+        "title": "Business & Consultant Sites",
+        "description": "Clear service pages, contact flows, and trust signals that help clients decide to reach out."
+      },
+      "restaurantHospitality": {
+        "title": "Restaurant & Hospitality Sites",
+        "description": "Menus, galleries, and booking links built to look good on a phone at the dinner table."
+      },
+      "studioPortfolio": {
+        "title": "Studio & Portfolio Sites",
+        "description": "Editorial layouts that let the work lead — for architects, designers, and creative studios."
+      },
+      "landingLaunch": {
+        "title": "Landing & Launch Pages",
+        "description": "Single-purpose pages built to convert — for a product launch, event, or campaign."
+      },
+      "storefront": {
+        "title": "Storefront Frontends",
+        "description": "The customer-facing side of an online shop — product pages, cart flow, and checkout UI."
+      },
+      "refreshSpeed": {
+        "title": "Website Refresh & Speed Fixes",
+        "description": "An existing site that's slow or outdated — rebuilt or repaired without starting from zero."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "How a Project Runs",
+    "title": "Four steps. No handoffs, no lost context.",
+    "description": "One person owns the whole build — so nothing gets lost between the design file and the live site.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "A short call or written brief to understand the business, the audience, and what the site needs to do."
+      },
+      "design": {
+        "title": "Design",
+        "description": "A visual direction and page layout built around the brand — shared for feedback before any code is written."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Responsive, fast, accessible code — tested across browsers and devices, not just the one on my desk."
+      },
+      "deploySupport": {
+        "title": "Deploy & Support",
+        "description": "The site goes live on your domain, with a short handover and support window for the first fixes."
+      }
+    }
+  },
+  "work": {
+    "eyebrow": "Selected Work",
+    "title": "A few sites built recently.",
+    "description": "Client work and self-directed practice pieces, spanning hospitality, architecture, and energy consulting.",
+    "viewLive": "View live site ↗",
+    "comingSoon": "Live site coming soon",
+    "items": {
+      "forno-rosso": {
+        "name": "Forno Rosso",
+        "role": "Restaurant Frontend",
+        "description": "A fully responsive site for an Italian trattoria — animated hero, a structured menu across four courses, and a mobile slide-in navigation built for one-handed browsing."
+      },
+      "field-office": {
+        "name": "Field Office",
+        "role": "Architecture Studio Frontend",
+        "description": "An editorial-style site with an interactive canvas blueprint grid that responds to cursor movement, plus a structured project index for the studio's portfolio."
+      },
+      "energiedirekt": {
+        "name": "EnergieDirekt",
+        "role": "Consultant Business Website",
+        "description": "A business site for an independent energy consultant — helping homeowners compare providers, with a multi-channel contact hub and a guided comparison flow."
+      }
+    }
+  },
+  "stack": {
+    "heading": "Tools behind\nevery build."
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Based in Kampala. Working with clients everywhere.",
+    "paragraph1": "I'm a self-taught web developer with three years of hands-on experience building sites for real clients — from an NGO impact dashboard to restaurant and consultant websites launched from scratch.",
+    "paragraph2": "I use AI tools the way a good carpenter uses power tools: to work faster, not to skip the craftsmanship. Every site is still designed, tested, and reviewed line by line before it goes live.",
+    "facts": {
+      "basedIn": { "label": "Based In", "value": "Kampala, Uganda" },
+      "worksWith": { "label": "Works With", "value": "Clients Worldwide" },
+      "availability": { "label": "Availability", "value": "Immediate Start" }
+    }
+  },
+  "contact": {
+    "eyebrow": "Start a Project",
+    "title": "Have a site to build? Let's talk about it.",
+    "subhead": "Tell me a bit about the business and what the site needs to do — I'll reply with next steps and a rough timeline.",
+    "emailCta": "Email me",
+    "callCta": "Call / WhatsApp",
+    "metaLabels": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Omwata John Charles. Built and deployed by me."
+  },
+  "metadata": {
+    "title": "Omwata John Charles — Websites, Designed & Built",
+    "description": "Freelance web developer in Kampala, Uganda. I design, build, and deploy custom websites for businesses, restaurants, studios, and consultants."
+  }
+}
