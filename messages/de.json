@@ -93,6 +93,21 @@
     "viewLive": "Live-Website ansehen ↗",
     "comingSoon": "Live-Website folgt in Kürze",
     "items": {
+      "auszeit-mosel": {
+        "name": "Auszeit Mosel",
+        "role": "Frontend für Gastgewerbe & Reisen",
+        "description": "Eine Auszeit-Website für einen Aufenthalt im deutschen Moseltal — Details und ein Live-Link folgen in Kürze."
+      },
+      "vd-handwerk": {
+        "name": "VD Handwerk²",
+        "role": "Hausmeisterservice & Handwerksleistungen",
+        "description": "Eine zweisprachige (Deutsch/Russisch) Business-Website für ein Hausmeister- und Handwerksunternehmen in Wuppertal und im Bergischen Land — mit Leistungen, Ablauf und einer Projektgalerie, damit Hausbesitzer und Hausverwaltungen schnell Kontakt aufnehmen können."
+      },
+      "stromfritz": {
+        "name": "Stromfritz",
+        "role": "Werkzeug zum Stromvergleich",
+        "description": "Ein Werkzeug zum Vergleichen von Stromtarifen und -anbietern — Details und ein Live-Link folgen in Kürze."
+      },
       "forno-rosso": {
         "name": "Forno Rosso",
         "role": "Restaurant-Frontend",
