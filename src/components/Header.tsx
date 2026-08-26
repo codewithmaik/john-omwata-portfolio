@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { navLinks } from "@/data/navigation";
+import { focusRing } from "@/lib/styles";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
         <a
           href="#top"
           onClick={() => setOpen(false)}
-          className="flex items-center gap-3 text-white"
+          className={`flex items-center gap-3 text-white ${focusRing}`}
         >
           <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full border border-sage font-serif text-[13px] font-bold text-sage">
             OJ
@@ -47,7 +48,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-[3px] bg-sage px-[18px] py-[9px] text-[13px] font-semibold tracking-wide text-forest-deep transition-colors hover:bg-[#93b884]"
+                className={`rounded-[3px] bg-sage px-[18px] py-[9px] text-[13px] font-semibold tracking-wide text-forest-deep transition-colors hover:bg-[#93b884] ${focusRing}`}
               >
                 {link.label}
               </a>
@@ -56,7 +57,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="group relative text-[13.5px] tracking-wide text-sage-light transition-colors hover:text-white"
+                className={`group relative text-[13.5px] tracking-wide text-sage-light transition-colors hover:text-white ${focusRing}`}
               >
                 {link.label}
                 <span className="absolute -bottom-[5px] left-0 h-px w-0 bg-sage transition-all duration-[250ms] group-hover:w-full" />
@@ -70,7 +71,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className="hidden flex-col justify-center gap-[5px] max-[720px]:flex"
+          className={`hidden flex-col justify-center gap-[5px] max-[720px]:flex ${focusRing}`}
         >
           <span className="block h-[1.5px] w-[22px] bg-white" />
           <span className="block h-[1.5px] w-[22px] bg-white" />
