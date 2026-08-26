@@ -34,7 +34,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-[1180px] items-center justify-between px-8 max-[480px]:px-5">
         <Link
           href="/"
-          onClick={() => setOpen(false)}
+          onClick={(e) => {
+            setOpen(false);
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
           className={`group flex items-center gap-3 text-white ${focusRing}`}
         >
           <span className="flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full border border-sage font-serif text-[13px] font-bold text-sage transition-all duration-300 ease-out group-hover:scale-110 group-hover:bg-sage group-hover:text-forest-deep">

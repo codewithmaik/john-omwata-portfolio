@@ -3,6 +3,7 @@ import { DM_Sans, IBM_Plex_Mono, Playfair_Display } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import BackToTop from "@/components/BackToTop";
 import { routing, type Locale } from "@/i18n/routing";
 import "../globals.css";
 
@@ -79,7 +80,10 @@ export default async function LocaleLayout({
       className={`${playfairDisplay.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
     >
       <body className="overflow-x-hidden font-sans">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <BackToTop />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

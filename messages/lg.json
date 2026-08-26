@@ -5,7 +5,8 @@
     "process": "Enkola",
     "about": "Ebikwata ku nze",
     "contact": "Tukwatagane",
-    "startProject": "Tandika Pulojekiti"
+    "startProject": "Tandika Pulojekiti",
+    "backToTop": "Ddayo Waggulu"
   },
   "nav": {
     "toggleMenu": "Ggulawo Menyu",
@@ -152,7 +153,111 @@
     }
   },
   "footer": {
+    "tagline": "Emikutu gy'empuliziganya egy'enjawulo eri bizinensi, wooteeri, ne situdiyo — nga byazimbibwa omuntu omu okuva ku ntandikwa okutuuka ku nkomerero.",
+    "siteHeading": "Omukutu",
+    "legalHeading": "Eby'Amateeka",
+    "resourcesHeading": "Emikutu Egigasa",
     "copyright": "© {year} Omwata John Charles. Nzimbye era ne nfulumya nzekka."
+  },
+  "legal": {
+    "backToHome": "← Ddayo ku Ntandikwa",
+    "impressum": {
+      "navLabel": "Imprint",
+      "metaTitle": "Imprint — Omwata John Charles",
+      "eyebrow": "Legal Notice",
+      "title": "Imprint",
+      "intro": "Provider identification in line with §5 of the German Digital Services Act (DDG, formerly TMG), provided for transparency to visitors from Germany and the EU.",
+      "sections": [
+        {
+          "heading": "Provider",
+          "body": ["Omwata John Charles", "Freelance Web Developer", "Kampala, Uganda"]
+        },
+        {
+          "heading": "Contact",
+          "body": ["Email: omwatajohncharles@gmail.com", "Phone: +256 779 239 902"]
+        },
+        {
+          "heading": "Note on registration & address",
+          "body": [
+            "I operate as an individual freelancer based in Uganda, outside the European Union. There is no German commercial register entry, no VAT identification number, and no published street address, as none of these apply to a non-EU sole proprietor of this kind.",
+            "This notice is provided on a good-faith, best-effort basis for visitors from Germany and the EU, even though formal Impressumspflicht enforceability against a business established outside the EU is limited."
+          ]
+        },
+        {
+          "heading": "Liability for content",
+          "body": [
+            "The content on this website has been created with care. However, I cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, I am responsible for my own content on these pages under general law, but am not obligated to monitor transmitted or stored third-party information.",
+            "Obligations to remove or block the use of information under general law remain unaffected. Any liability in this regard is only possible from the point in time at which a concrete infringement becomes known. Upon notification of such violations, this content will be removed promptly."
+          ]
+        },
+        {
+          "heading": "Liability for links",
+          "body": [
+            "This website contains links to external third-party websites over whose content I have no influence. Therefore, I cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for their content.",
+            "The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at that time. Permanent monitoring of the content of linked pages is not reasonable without concrete evidence of an infringement. Upon notification of violations, such links will be removed promptly."
+          ]
+        },
+        {
+          "heading": "Copyright",
+          "body": [
+            "The content and works created by the site operator on this website are subject to copyright law. Reproduction, editing, distribution, and any kind of use outside the limits of copyright law require the written consent of the respective author.",
+            "Insofar as the content on this site was not created by the operator, third-party copyrights are respected and marked as such. Should you nonetheless become aware of a copyright infringement, please notify me by email and such content will be removed promptly."
+          ]
+        },
+        {
+          "heading": "Dispute resolution",
+          "body": [
+            "The European Commission provides a platform for online dispute resolution: https://ec.europa.eu/consumers/odr/. I am not obligated and not willing to participate in dispute resolution proceedings before a consumer arbitration board."
+          ]
+        }
+      ]
+    },
+    "datenschutz": {
+      "navLabel": "Privacy Policy",
+      "metaTitle": "Privacy Policy — Omwata John Charles",
+      "eyebrow": "Data Protection",
+      "title": "Privacy Policy",
+      "intro": "This policy explains, in plain terms, what happens to data when you visit this website — and, just as importantly, what does not.",
+      "sections": [
+        {
+          "heading": "Responsible party",
+          "body": [
+            "Omwata John Charles, Kampala, Uganda.",
+            "Email: omwatajohncharles@gmail.com · Phone: +256 779 239 902"
+          ]
+        },
+        {
+          "heading": "Hosting",
+          "body": [
+            "This website is statically hosted by Vercel Inc. (San Francisco, USA). To operate and secure the infrastructure, Vercel's servers may automatically process technical log data such as IP address, browser type, and access timestamps. I do not have direct access to this data and do not use it myself. Details are available in Vercel's privacy policy: https://vercel.com/legal/privacy-policy."
+          ]
+        },
+        {
+          "heading": "No cookies, no analytics, no tracking",
+          "body": [
+            "This site does not set cookies, does not use analytics or advertising scripts, and does not run any visitor-tracking technology of any kind. No personal data is collected, stored, or processed by the website itself."
+          ]
+        },
+        {
+          "heading": "Contact via email or phone",
+          "body": [
+            "The email and phone links on this site open your own email or phone app. Any information you choose to share this way — your address, name, or message — is handled entirely through your own provider and is used solely to reply to your enquiry. It is never stored on or by this website."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "If you are located in the EU, the GDPR gives you the right to access, correct, delete, or restrict the processing of your personal data, the right to data portability, and the right to lodge a complaint with a data protection supervisory authority. To exercise any of these rights, contact me by email."
+          ]
+        },
+        {
+          "heading": "Changes to this policy",
+          "body": [
+            "This policy may be updated from time to time to reflect changes to the site or to legal requirements. The version published here is always the current one."
+          ]
+        }
+      ]
+    }
   },
   "metadata": {
     "title": "Omwata John Charles — Emikutu gya Yintaneeti, Ebizimbiddwa n'Obukugu",
