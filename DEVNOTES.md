@@ -65,6 +65,8 @@ exist in this repo.
 - GitHub: `codewithmaik/john-omwata-portfolio` (public)
 - Vercel: team `codewithmaik`, project `john-omwata-portfolio`
 - Production: https://john-omwata-portfolio.vercel.app
+- Also aliased to: https://johnomwata-dev.vercel.app (`codewithjohn.vercel.app`
+  was requested but is already claimed by an unrelated Vercel account)
 
 **Open item:** the Vercel project isn't connected to GitHub for
 auto-deploy-on-push yet — the Vercel account needs a Login Connection to the
