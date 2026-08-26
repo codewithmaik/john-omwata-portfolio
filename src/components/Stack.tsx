@@ -1,0 +1,28 @@
+import { stackItems } from "@/data/stack";
+
+export default function Stack() {
+  return (
+    <section className="bg-cream py-[100px] max-[720px]:py-[70px]">
+      <div className="mx-auto max-w-[1180px] px-8 max-[480px]:px-5">
+        <div className="grid grid-cols-[280px_1fr] gap-12 max-[920px]:grid-cols-1">
+          <h2 className="font-serif text-[clamp(26px,3vw,36px)] leading-[1.2] font-semibold text-forest">
+            Tools behind
+            <br />
+            every build.
+          </h2>
+
+          <ul className="flex flex-wrap content-start gap-3">
+            {stackItems.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-line bg-paper px-4 py-2 font-mono text-[13px] text-ink-soft"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
