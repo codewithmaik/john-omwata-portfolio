@@ -25,12 +25,18 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,padding,box-shadow] duration-[350ms] ${
-        scrolled
-          ? "bg-forest-deep/92 py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.18)] backdrop-blur-md"
-          : "py-[22px]"
+      className={`fixed inset-x-0 top-0 z-50 transition-[padding] duration-[350ms] ${
+        scrolled ? "py-3.5" : "py-[22px]"
       }`}
     >
+      <div
+        aria-hidden
+        className={`absolute inset-0 -z-10 transition-[background-color,box-shadow] duration-[350ms] ${
+          scrolled
+            ? "bg-forest-deep/92 shadow-[0_8px_30px_rgba(0,0,0,0.18)] backdrop-blur-md"
+            : ""
+        }`}
+      />
       <div className="mx-auto flex max-w-[1180px] items-center justify-between px-8 max-[480px]:px-5">
         <Link
           href="/"
