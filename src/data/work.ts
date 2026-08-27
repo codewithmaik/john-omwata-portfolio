@@ -32,6 +32,7 @@ export const workItems: WorkItem[] = [
     id: "stromfritz",
     year: "2026",
     tags: ["Next.js", "Tailwind CSS", "Responsive"],
+    href: "https://stromfritz.vercel.app",
     thumbSeed: 2,
   },
   {

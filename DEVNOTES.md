@@ -82,13 +82,19 @@ vercel --prod
 
 - No contact form — contact is `mailto:`/`tel:` only, matching the original
   site. Revisit if a real intake flow is wanted later.
-- **Stromfritz** work item still uses placeholder copy — its live
-  deployment (`stromfritz.vercel.app`) currently returns Vercel
-  `DEPLOYMENT_NOT_FOUND`. Once redeployed, update
-  `messages/{en,de,lg}.json` → `work.items.stromfritz` with real copy and
-  set `href` in `src/data/work.ts`.
 - Luganda (`lg`) translations were machine-authored — worth a native-speaker
   review pass at some point, flagged when this was set up.
+
+## 2026-08-27: work items update (2)
+
+- **Stromfritz** now links to its live deployment
+  (`https://stromfritz.vercel.app`) via `href` in `src/data/work.ts`; copy
+  updated in `messages/{en,de,lg}.json` to drop the "live link on the way"
+  placeholder line.
+- Added a `contact.specialization` line
+  ("Specializing in clients in Germany and the EU.") rendered in
+  `Contact.tsx` just below the email/phone/location meta grid, in all
+  three locales.
 
 ## 2026-08-27: work items update
 
