@@ -66,6 +66,8 @@ export default async function Contact() {
             </div>
           ))}
         </div>
+
+        <p className="mt-6 font-mono text-[13px] text-sage-light/60">{t("specialization")}</p>
       </div>
     </section>
   );

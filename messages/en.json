@@ -108,7 +108,7 @@
       "stromfritz": {
         "name": "Stromfritz",
         "role": "Energy Comparison Tool",
-        "description": "A tool for comparing electricity tariffs and providers — details and a live link are on the way."
+        "description": "A tool for comparing electricity tariffs and providers."
       },
       "forno-rosso": {
         "name": "Forno Rosso",
@@ -146,7 +146,8 @@
       "email": "Email",
       "phone": "Phone",
       "location": "Location"
-    }
+    },
+    "specialization": "Specializing in clients in Germany and the EU."
   },
   "footer": {
     "tagline": "Custom websites for businesses, restaurants, and studios — designed and built by one person, start to finish.",

@@ -108,7 +108,7 @@
       "stromfritz": {
         "name": "Stromfritz",
         "role": "Akalulu k'Okugeraageranya Amasannyalaze",
-        "description": "Akalulu ak'okugeraageranya emiwendo n'abakola amasannyalaze — ebisingawo n'omukutu nga guli live bijja mu bbanga ttono."
+        "description": "Akalulu ak'okugeraageranya emiwendo n'abakola amasannyalaze."
       },
       "forno-rosso": {
         "name": "Forno Rosso",
@@ -146,7 +146,8 @@
       "email": "Email",
       "phone": "Essimu",
       "location": "Ekifo"
-    }
+    },
+    "specialization": "Yeewaddeyo ku bakasitoma ab'omu Bugirimaani ne EU."
   },
   "footer": {
     "tagline": "Emikutu gy'empuliziganya egy'enjawulo eri bizinensi, wooteeri, ne situdiyo — nga byazimbibwa omuntu omu okuva ku ntandikwa okutuuka ku nkomerero.",
