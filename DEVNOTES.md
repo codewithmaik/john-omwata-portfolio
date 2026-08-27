@@ -80,19 +80,25 @@ vercel --prod
 
 ## Known follow-ups
 
-- The EnergieDirekt work item has no live link yet (`href` is unset in
-  `src/data/work.ts`, rendered as "Live site coming soon"). Add the URL
-  there once the site ships.
 - No contact form — contact is `mailto:`/`tel:` only, matching the original
   site. Revisit if a real intake flow is wanted later.
-- **Auszeit Mosel** and **Stromfritz** work items use placeholder copy —
-  their live deployments (`auszeit-mosel.vercel.app`,
-  `stromfritz.vercel.app`) currently return Vercel `DEPLOYMENT_NOT_FOUND`.
-  Once redeployed, update `messages/{en,de,lg}.json` → `work.items.auszeit-mosel`
-  / `work.items.stromfritz` with real copy and set `href` in
-  `src/data/work.ts`.
+- **Stromfritz** work item still uses placeholder copy — its live
+  deployment (`stromfritz.vercel.app`) currently returns Vercel
+  `DEPLOYMENT_NOT_FOUND`. Once redeployed, update
+  `messages/{en,de,lg}.json` → `work.items.stromfritz` with real copy and
+  set `href` in `src/data/work.ts`.
 - Luganda (`lg`) translations were machine-authored — worth a native-speaker
   review pass at some point, flagged when this was set up.
+
+## 2026-08-27: work items update
+
+- **Auszeit Mosel** now links to its live deployment
+  (`https://auszeit-mosel.vercel.app`) via `href` in `src/data/work.ts`;
+  copy updated in `messages/{en,de,lg}.json` to drop the "live link on the
+  way" placeholder line.
+- **EnergieDirekt** work item removed entirely — deleted from
+  `src/data/work.ts` (including the `id` union type) and from
+  `work.items.energiedirekt` in all three `messages/*.json` files.
 
 ## In-progress: 2026-08-26 feature batch
 

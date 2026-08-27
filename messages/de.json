@@ -98,7 +98,7 @@
       "auszeit-mosel": {
         "name": "Auszeit Mosel",
         "role": "Frontend für Gastgewerbe & Reisen",
-        "description": "Eine Auszeit-Website für einen Aufenthalt im deutschen Moseltal — Details und ein Live-Link folgen in Kürze."
+        "description": "Eine Auszeit-Website für einen Aufenthalt im deutschen Moseltal."
       },
       "vd-handwerk": {
         "name": "VD Handwerk²",
@@ -119,11 +119,6 @@
         "name": "Field Office",
         "role": "Frontend für ein Architekturstudio",
         "description": "Eine redaktionell gestaltete Website mit einem interaktiven Canvas-Bauplan-Raster, das auf Mausbewegungen reagiert, sowie einem strukturierten Projektindex für das Portfolio des Studios."
-      },
-      "energiedirekt": {
-        "name": "EnergieDirekt",
-        "role": "Website für ein Beratungsunternehmen",
-        "description": "Eine Business-Website für einen unabhängigen Energieberater — hilft Hausbesitzern beim Anbietervergleich, mit zentraler Kontaktstelle und geführtem Vergleichsablauf."
       }
     }
   },

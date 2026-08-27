@@ -98,7 +98,7 @@
       "auszeit-mosel": {
         "name": "Auszeit Mosel",
         "role": "Omukutu gw'Okuwummula n'Okutambula",
-        "description": "Omukutu ogw'ekifo ky'okuwummulamu mu kiwonvu kya Mosel mu Bugirimaani — ebisingawo n'omukutu nga guli live bijja mu bbanga ttono."
+        "description": "Omukutu ogw'ekifo ky'okuwummulamu mu kiwonvu kya Mosel mu Bugirimaani."
       },
       "vd-handwerk": {
         "name": "VD Handwerk²",
@@ -119,11 +119,6 @@
         "name": "Field Office",
         "role": "Omukutu gwa Situdiyo y'Obuzimbi",
         "description": "Omukutu ogw'enkola ya magazini ogulimu akapande k'ebifaananyi akakola ku kusenula kwa mouse, awamu n'olukalala olutegeke olw'emirimu gya situdiyo."
-      },
-      "energiedirekt": {
-        "name": "EnergieDirekt",
-        "role": "Omukutu gwa Bizinensi y'Okuwa Amagezi",
-        "description": "Omukutu gwa bizinensi ogw'omuwa amagezi ow'amasannyalaze eyeeyimirizza — ayamba bannannyini nnyumba okugeraageranya abakola amasannyalaze, ng'alimu ekifo ky'okutuukirira mu ngeri nnyingi n'enkola y'okugeraageranya egoberera."
       }
     }
   },
