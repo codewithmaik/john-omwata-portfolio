@@ -4,8 +4,7 @@ export type WorkItem = {
     | "vd-handwerk"
     | "stromfritz"
     | "forno-rosso"
-    | "field-office"
-    | "energiedirekt";
+    | "field-office";
   year: string;
   tags: string[];
   href?: string;
@@ -18,6 +17,7 @@ export const workItems: WorkItem[] = [
     id: "auszeit-mosel",
     year: "2026",
     tags: ["Next.js", "Tailwind CSS", "Responsive"],
+    href: "https://auszeit-mosel.vercel.app",
     thumbSeed: 0,
   },
   {
@@ -47,11 +47,5 @@ export const workItems: WorkItem[] = [
     tags: ["HTML5", "CSS3", "Canvas API", "Responsive"],
     href: "https://wonderfultoffee.netlify.app/",
     thumbSeed: 4,
-  },
-  {
-    id: "energiedirekt",
-    year: "2024 – Present",
-    tags: ["HTML5", "CSS3", "Vanilla JS", "Responsive"],
-    thumbSeed: 5,
   },
 ];

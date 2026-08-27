@@ -98,7 +98,7 @@
       "auszeit-mosel": {
         "name": "Auszeit Mosel",
         "role": "Hospitality & Travel Frontend",
-        "description": "A getaway-style site for a stay in Germany's Mosel valley — details and a live link are on the way."
+        "description": "A getaway-style site for a stay in Germany's Mosel valley."
       },
       "vd-handwerk": {
         "name": "VD Handwerk²",
@@ -119,11 +119,6 @@
         "name": "Field Office",
         "role": "Architecture Studio Frontend",
         "description": "An editorial-style site with an interactive canvas blueprint grid that responds to cursor movement, plus a structured project index for the studio's portfolio."
-      },
-      "energiedirekt": {
-        "name": "EnergieDirekt",
-        "role": "Consultant Business Website",
-        "description": "A business site for an independent energy consultant — helping homeowners compare providers, with a multi-channel contact hub and a guided comparison flow."
       }
     }
   },
