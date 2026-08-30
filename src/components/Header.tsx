@@ -117,11 +117,23 @@ export default function Header() {
           aria-label={tNav("toggleMenu")}
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
-          className={`hidden flex-col justify-center gap-[5px] max-[720px]:flex ${focusRing}`}
+          className={`hidden flex-col justify-center gap-[5px] max-[720px]:relative max-[720px]:z-[60] max-[720px]:flex ${focusRing}`}
         >
-          <span className="block h-[1.5px] w-[22px] bg-white" />
-          <span className="block h-[1.5px] w-[22px] bg-white" />
-          <span className="block h-[1.5px] w-[22px] bg-white" />
+          <span
+            className={`block h-[1.5px] w-[22px] bg-white transition-transform duration-300 ${
+              open ? "translate-y-[6.5px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-[1.5px] w-[22px] bg-white transition-opacity duration-300 ${
+              open ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block h-[1.5px] w-[22px] bg-white transition-transform duration-300 ${
+              open ? "-translate-y-[6.5px] -rotate-45" : ""
+            }`}
+          />
         </button>
       </div>
     </header>
