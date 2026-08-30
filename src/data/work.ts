@@ -24,7 +24,7 @@ export const workItems: WorkItem[] = [
     id: "vd-handwerk",
     year: "2025",
     tags: ["Next.js", "Responsive", "Multilingual"],
-    href: "https://vd-handwerk2.vercel.app",
+    href: "https://vd-handwerk2.de",
     caseStudySlug: "vd-handwerk",
     thumbSeed: 1,
   },

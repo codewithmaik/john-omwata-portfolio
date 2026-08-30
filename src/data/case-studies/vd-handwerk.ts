@@ -1,6 +1,6 @@
 export const vdHandwerkCaseStudy = {
   slug: "vd-handwerk" as const,
-  href: "https://vd-handwerk2.vercel.app",
+  href: "https://vd-handwerk2.de",
   serviceIds: [
     "hausmeister",
     "garten",
